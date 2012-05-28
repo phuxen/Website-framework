@@ -32,6 +32,11 @@
 	@themeColor:		@blue;	/* f60 46a546 66ccff da5555*/
 	@themeColorDark:	lighten(@themeColor, -15%);
 	
+	body.kraken {
+		@themeColor:		@red;	/* f60 46a546 66ccff da5555*/
+		@themeColorDark:	lighten(@themeColor, -15%);
+	}
+	
 	@backgroundColor:	lighten(@black, 96%);
 	
 	// Typography
@@ -145,11 +150,20 @@ Useful classes
 .displayNone {
 	display:none;
 }
+.paddingGlobal {
+	padding:@globalPadding;
+}
 .padding30 {
 	padding:30px;
 }
 .padding20 {
 	padding:20px;
+}
+.padding10 {
+	padding:10px;
+}
+.padding0 {
+	padding:0px!important;
 }
 .globalPadding {
 	padding:@globalPadding;

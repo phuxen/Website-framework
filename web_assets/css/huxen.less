@@ -8,6 +8,10 @@ JAN 2012
 @import "var.less";
 @import "last.fm.less";
 
+body.kraken {
+	background:#fff;
+}
+
 /* -----------------------------------------------------------------------------------------
 Main structure
 ----------------------------------------------------------------------------------------- */
@@ -42,7 +46,6 @@ Navigation
 #blackBar 				{
 							width:100%;float:left;margin:0;.box-shadow;
 							border-bottom:1px solid (lighten(@navGradTop,-20%));
-							//background:url(../images/blackBar.jpg) top center repeat-x;
 							.gradientBar(@navGradTop, @navGradBot);
 							position:fixed;z-index:10;
 						}
@@ -128,7 +131,7 @@ Typography
 @font-face {
 	font-family: 'Pictos';
 	src: url('../icons/pictos-web.eot');
-	src: local('☺'), url('../icons/pictos-web.woff') format('woff'), url('../icons/pictos-web.ttf') format('truetype'), url('../icons/pictos-web.svg#webfontphKv1xv9') format('svg');
+	src: local('☺'), url('../icons/pictos-web.woff') format('woff'),url('../icons/pictos-web.ttf') format('truetype'), url('../icons/pictos-web.svg#webfontphKv1xv9') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -715,6 +718,10 @@ html	{font-size:1.2em;}
     position: relative;
 }
 */
+.instagram {
+	overflow:hidden;
+	//width:(@siteWidthFull/100) * 70;
+}
 .instagram .more {
     position: relative;
     float: right;
@@ -728,16 +735,17 @@ html	{font-size:1.2em;}
 	padding: 1em;
 }
 .instagramPhoto {
-	border:5px solid @white;
+	/*border:5px solid @white;
 	.box-shadow;
 	margin:5px;
-	.transition(.2s linear all);
+	.transition(.2s linear all);*/
+	margin:0;
+	line-height:0;
+	float:left;
+	margin:5px 0px 5px 5px;
+	opacity:0.7;
 }
 .instagramPhoto:hover {
-	-webkit-transform: rotate(5deg); /* safari and chrome */
-	-moz-transform: rotate(5deg);/*firefox browsers */
-	transform: rotate(5deg);/*other */
-	-ms-transform:rotate(5deg); /* Internet Explorer 9 */
-	-o-transform:rotate(5deg); /* Opera */
+	opacity:1;
 }
 

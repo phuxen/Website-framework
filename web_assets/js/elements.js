@@ -26,7 +26,7 @@ $(function () {
 	});*/
 	
 	$(".instagram").instagram('getStream', {
-		count: 6,
+		count: 8,
 		user: 603015
 	});
 });
