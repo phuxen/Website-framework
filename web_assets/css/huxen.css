@@ -504,15 +504,15 @@ body.kraken {
 Main structure
 ----------------------------------------------------------------------------------------- */
 html {
-  font-size: 1em;
+  font-size: 0.9em;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 body {
   min-height: 100%;
-  background: url(../images/bodyAll.jpg) repeat scroll #f5f5f5;
+  background: url(../images/bodyAllLines.jpg) repeat scroll #f5f5f5;
   overflow-x: hidden;
-  color: #444444;
+  color: #bfbfbf;
 }
 .mobileLogo {
   display: none;
@@ -553,6 +553,7 @@ Navigation
   border-color: #000000;
   position: fixed;
   z-index: 10;
+  display: none;
 }
 #blackBarInner {
   width: 900px;
@@ -633,7 +634,7 @@ Main
 }
 .content {
   float: left;
-  padding: 60px 0 30px;
+  padding: 0 0 30px;
   border-bottom-width: 3px;
   width: 100%;
 }
@@ -642,11 +643,11 @@ Main
   width: 630px;
   padding: 30px;
   position: relative;
-  background: #ffffff;
+  background: rgba(0, 0, 0, 0.5);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  border: 1px solid #bfbfbf;
+  border: 1px solid #000000;
 }
 .side {
   float: left;
@@ -676,11 +677,11 @@ Main
 }
 /* Select the projects */
 .face {
-  background: #ffffff;
+  background: rgba(0, 0, 0, 0.5);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  border: 1px solid #bfbfbf;
+  border: 1px solid #000000;
   padding: 10px;
   margin: 0 0 30px;
 }
@@ -770,6 +771,108 @@ Main
   width: 100%;
   overflow: hidden;
 }
+/* ----------------------------------------------------
+Homepage containers
+---------------------------------------------------- */
+#container {
+  clear: both;
+}
+.box {
+  float: left;
+  overflow: hidden;
+  color: #595959;
+  display: block;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-color: #ffffff;
+  margin: 1px;
+  display: table;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+}
+.box h4 {
+  color: #333333;
+}
+.box:hover .boxInfo {
+  display: block;
+}
+.box.about {
+  background: #049cdb;
+}
+.box.about:hover {
+  background: #17b8fb;
+}
+.box.topTitle {
+  background: none;
+}
+.box.topTitle h1 {
+  font-size: 4em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.box.topTitle h2 {
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 3px;
+  color: #bfbfbf;
+}
+.box.LTKD {
+  background-image: url(../images/ltkd3.jpg);
+}
+.box.bollard {
+  background-image: url(../images/bollard1.jpg);
+}
+.box.lastfmApp {
+  background-image: url(../images/lastFM_ScreenCap_1.jpg);
+}
+.col1 {
+  width: 178px;
+}
+.col2 {
+  width: 358px;
+}
+.col3 {
+  width: 538px;
+}
+.col4 {
+  width: 898px;
+}
+.height1 {
+  height: 178px;
+}
+.height2 {
+  height: 358px;
+}
+.height3 {
+  height: 538px;
+}
+.boxTitle {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  padding: 5px;
+}
+.boxTitle {
+  color: #ffffff;
+}
+.boxInfo {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+}
+.boxInfo p {
+  margin-bottom: 0;
+}
 /* -----------------------------------------------------------------------------------------
 Typography
 ----------------------------------------------------------------------------------------- */
@@ -793,7 +896,7 @@ Typography
   font-weight: normal;
   font-style: normal;
 }
-.bollard {
+.bollardFont {
   font-family: "bollard", "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   font-weight: normal;
 }
@@ -816,7 +919,7 @@ h2,
 h3,
 h4,
 h5 {
-  color: #242424;
+  color: #ffffff;
   font-weight: bold;
 }
 h1 {
@@ -841,7 +944,6 @@ h4 {
   font-size: 1.2em;
   line-height: 1.2;
   margin-bottom: 0.1em;
-  color: #444444;
 }
 p,
 address {
@@ -860,7 +962,7 @@ em {
 h1 em,
 h2 em,
 h3 em {
-  color: #444444;
+  color: #bfbfbf;
   letter-spacing: 0;
 }
 strong {
@@ -1073,20 +1175,20 @@ HEARTS
 }
 .heart.empty:before,
 .heart.empty:after {
-  background: #3e3e3e;
+  background: #ffffff;
   /* Old browsers */
 
-  background: -moz-linear-gradient(top, #575757 50%, #3e3e3e 100%);
+  background: -moz-linear-gradient(top, #ffffff 50%, #ffffff 100%);
   /* FF3.6+ */
 
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #575757), color-stop(100%, #3e3e3e));
-  background: -webkit-linear-gradient(top, #575757 50%, #3e3e3e 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffffff), color-stop(100%, #ffffff));
+  background: -webkit-linear-gradient(top, #ffffff 50%, #ffffff 100%);
   /* Chrome10+,Safari5.1+ */
 
-  background: -o-linear-gradient(top, #575757 50%, #3e3e3e 100%);
+  background: -o-linear-gradient(top, #ffffff 50%, #ffffff 100%);
   /* Opera11.10+ */
 
-  background: -ms-linear-gradient(top, #575757 50%, #3e3e3e 100%);
+  background: -ms-linear-gradient(top, #ffffff 50%, #ffffff 100%);
   /* IE10+ */
 
 }
@@ -1131,11 +1233,11 @@ FLOW CHART
   position: absolute;
   top: 20px;
   left: 4em;
-  background: #242424;
+  background: #ffffff;
   width: 500px;
   border-style: solid;
   border-width: 6px;
-  border-color: #3e3e3e;
+  border-color: #ffffff;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -1148,7 +1250,7 @@ FLOW CHART
   top: 40%;
   left: -1.7em;
   font-size: 1.5em;
-  border-right: 1em solid #3e3e3e;
+  border-right: 1em solid #ffffff;
   position: absolute;
 }
 .TFL_PS_tip_wrapper h4 {
@@ -1164,11 +1266,11 @@ FLOW CHART
   position: absolute;
   top: 20px;
   left: 4em;
-  background: #242424;
+  background: #ffffff;
   width: 500px;
   border-style: solid;
   border-width: 6px;
-  border-color: #3e3e3e;
+  border-color: #ffffff;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -1181,7 +1283,7 @@ FLOW CHART
   top: 40%;
   left: -1.7em;
   font-size: 1.5em;
-  border-right: 1em solid #3e3e3e;
+  border-right: 1em solid #ffffff;
   position: absolute;
 }
 .TFL_AI_tip_wrapper h4 {
@@ -1197,11 +1299,11 @@ FLOW CHART
   position: absolute;
   top: 20px;
   left: 4em;
-  background: #242424;
+  background: #ffffff;
   width: 500px;
   border-style: solid;
   border-width: 6px;
-  border-color: #3e3e3e;
+  border-color: #ffffff;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -1214,7 +1316,7 @@ FLOW CHART
   top: 40%;
   left: -1.7em;
   font-size: 1.5em;
-  border-right: 1em solid #3e3e3e;
+  border-right: 1em solid #ffffff;
   position: absolute;
 }
 .TFL_ID_tip_wrapper h4 {
@@ -1540,7 +1642,7 @@ FOOTER
   width: 100%;
 }
 #footerWrapperInner {
-  border-top: #919191 0.1em solid;
+  border-top: #ffffff 0.1em solid;
 }
 #footerWrapper ul {
   list-style: none;
@@ -1559,7 +1661,7 @@ FOOTER
   padding: 0 0.7em 0 0;
 }
 #footerWrapper li a {
-  color: #444444;
+  color: #bfbfbf;
   -webkit-transition: 0.3s linear all;
   -moz-transition: 0.3s linear all;
   -ms-transition: 0.3s linear all;
@@ -1573,22 +1675,49 @@ FOOTER
 /* -----------------------------------------------------------------------------------------
 MEDIA QUERIES 600px
 ----------------------------------------------------------------------------------------- */
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 960px) {
   .container,
   #blackBarInner {
-    width: 650px;
+    width: 640px;
   }
   .main {
-    width: 455px;
+    width: 448px;
   }
   .side {
-    width: 175px;
+    width: 172px;
+  }
+  /* ----------------------------------------------------
+  	Homepage containers
+  	---------------------------------------------------- */
+  .col1 {
+    width: 160px;
+  }
+  .col2 {
+    width: 320px;
+  }
+  .col3 {
+    width: 480px;
+  }
+  .col4 {
+    width: 640px;
+  }
+  .height1 {
+    height: 160px;
+    background: #bfbfbf;
+  }
+  .height2 {
+    height: 320px;
+    background: #595959;
+  }
+  .height3 {
+    height: 480px;
+    background: #808080;
   }
 }
 /* -----------------------------------------------------------------------------------------
 MEDIA QUERIES Mobile
 ----------------------------------------------------------------------------------------- */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 740px) {
   html {
     font-size: 1.2em;
   }

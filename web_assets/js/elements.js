@@ -29,4 +29,10 @@ $(function () {
 		count: 8,
 		user: 603015
 	});
+	
+	$('#content').masonry({
+    	// options
+    	itemSelector : '.item',
+    	columnWidth : 240
+	});
 });

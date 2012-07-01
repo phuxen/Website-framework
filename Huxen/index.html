@@ -16,10 +16,31 @@
 		
 		<!-- Le scripts -->
 		<script src="../web_assets/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+		<!--
 		<script src="../web_assets/js/md5.js" type="text/javascript"></script>
 		<script src="../web_assets/js/jquery.gravatar.js" type="text/javascript"></script>
-		<script src="../web_assets/js/elements.js" type="text/javascript"></script>
-				
+		-->		
+		<script src="../web_assets/js/jquery.masonry.min.js" type="text/javascript"></script>
+		<script src="../web_assets/js/close-pixelate.js" type="text/javascript"></script>
+		
+		<!--<script src="../web_assets/js/elements.js" type="text/javascript"></script>-->
+		
+		<script>
+			$(function(){
+				$('#container').masonry({
+					itemSelector: '.box'
+				});
+			});
+			function init() {
+			  document.getElementById('portrait-image').closePixelate([
+			    { shape: 'diamond', resolution: 24, size: 25 },
+				{ shape: 'diamond', resolution: 24, offset: 12 },
+				{ resolution: 24, alpha: 0.5 }
+			  ]);
+			};
+window.addEventListener( 'load', init, false);
+		</script>
+						
 		<!-- Le fav and touch icons -->
 		<link rel="shortcut icon" href="../web_assets/images/favicon.ico">
 		<link rel="apple-touch-icon" href="../web_assets/images/apple-touch-icon.png">
@@ -44,9 +65,76 @@
 				<!-- end of hello -->
 				<div class="content">
 					<div class="huxenGlobal">
-						<h1>Wut</h1>
-						<p>Hello there, I'm Paul, a designer currently stomping around east London with a sweet beard and a battered iPod. I make interfaces for Burberry and that is awesome.</p>
-						<p>I've always been creative since I broke out a box of crayons and drew all over the walls. Thankfully now I don't draw on walls, I design for fashion labels or throw out a typeface through my font foundry – Kraken. I'll be found creating a UI for a webmail service using HTML5, CSS3 and {LESS}, or knocking up some advertising and web banners in the Adobe CS5 suite.</p>
+						<a href="" class="">
+							<div class="box col4 height1 topTitle">
+								<div class="boxTitle">
+									<h1>Paul Huxen</h1>
+									<h2>Web &amp; interface designer</h2>
+								</div>
+							</div>
+						</a>
+						<div id="container" class="clearfix">
+							<a href="">
+								<div class="box col1 height3 lastfmApp">
+									<div class="boxInfo">
+										<h4>Last.FM</h4>
+										<p>Plugin in for Mr Site Storefront eCommerce platform</p>
+									</div>
+								</div>
+							</a>
+							<a href="">
+								<div class="box col1 height1 bollard">
+									<div class="boxInfo">
+										<h4>Bollard</h4>
+										<p>Lorem ipsum</p>
+									</div>
+								</div>
+							</a>
+							<a href="">
+								<div class="box col1 height1">
+									<div class="boxInfo">
+										<h4>Title</h4>
+										<p>Lorem ipsum</p>
+									</div>
+								</div>
+							</a>
+							<a href="">
+								<div class="box col2 height1 about">
+									<div class="boxTitle">
+										<h1>Who is this guy?</h1>
+									</div>
+								</div>
+							</a>
+							<a href="">
+								<div class="box col2 height2">
+									<div class="boxInfo">
+										<h4>Title</h4>
+										<p>Lorem ipsum</p>
+									</div>
+								</div>
+							</a>
+							<a href="">
+								<div class="box col2 height2 LTKD">
+									<!--<img id="portrait-image" src="../web_assets/images/ltkd6.jpg" alt="ltkd6" width="430" height="498" />-->
+									<div class="boxInfo">
+										<h4>Title</h4>
+										<p>Lorem ipsum</p>
+									</div>
+								</div>
+							</a>
+							
+							<a href="">
+								<div class="box col3 height1 about">
+									<div class="boxTitle">
+										<h1>Résumé</h1>
+										<p>Because saying it in French is nicer</p>
+									</div>
+								</div>
+							</a>
+							
+							
+						</div><!-- #container -->
+
 					</div>
 				</div>
 				<div id="footerWrapper">
@@ -80,7 +168,7 @@
 								<a target="_blank" href="http://www.vimeo.com/phuxen" title="Watch my videos on Vimeo">Vimeo</a>
 							</li>
 						</ul>
-						<p><strong>&copy; 2009 &ndash; 2012 Paul Huxen</strong> Built with {LESS} &amp; HTML5</p>
+						<p><strong>&copy; 2009 &ndash; 2012 Paul Huxen</strong> Built with {LESS}, HTML5 &amp; Large cups of tea</p>
 					</div>
 				</div>
 				

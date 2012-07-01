@@ -16,13 +16,13 @@ body.kraken {
 Main structure
 ----------------------------------------------------------------------------------------- */
 html	{
-	font-size:1em;
+	font-size:0.9em;
 	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
-	line-height:1.6;
+	line-height:1.4;
 }
 body	{
 	min-height:100%;
-	background:url(../images/bodyAll.jpg) repeat scroll @backgroundColor;
+	background:url(../images/bodyAllLines.jpg) repeat scroll @backgroundColor;
 	overflow-x: hidden;
 	color:@bodyColor;
 }
@@ -47,7 +47,7 @@ Navigation
 							width:100%;float:left;margin:0;.box-shadow;
 							border-bottom:1px solid (lighten(@navGradTop,-20%));
 							.gradientBar(@navGradTop, @navGradBot);
-							position:fixed;z-index:10;
+							position:fixed;z-index:10;display: none;
 						}
 #blackBarInner						{width:@siteWidthFull;margin:0 auto;position:relative;}
 #blackBar ul.mainNav				{margin:0;float:left;}
@@ -80,15 +80,16 @@ Main
 		.header			{padding:0;}
 		.content		{
 							float:left;
-							padding:(@globalPadding*2) 0 @globalPadding;
+							//padding:(@globalPadding*2) 0 @globalPadding;
+							padding:0 0 @globalPadding;
 							border-bottom-width:3px;
 							width:100%;
 							//background:rgba(255,255,255,0.3);
 						}
 			.main		{
 							float:left;width:(@siteWidthFull/100) * 70;padding:@globalPadding;
-							position:relative;background:@white;
-							.roundCorners(5px);border:1px solid @grayLight;
+							position:relative;background:rgba(0,0,0,0.5);
+							.roundCorners(5px);border:1px solid @black;
 						}
 			.side		{
 							float:left;width:(@siteWidthFull/100) * 30 - 20;padding:0;
@@ -101,7 +102,7 @@ Main
 	.blurb				{float:left;width:((@siteWidthFull/100)*88) - (@globalPadding*2) - 2;}
 
 /* Select the projects */
-.face				{background:@white;.roundCorners(5px);border:1px solid @grayLight;padding:10px;margin:0 0 @globalPadding;}
+.face				{background:rgba(0,0,0,0.5);.roundCorners(5px);border:1px solid @black;padding:10px;margin:0 0 @globalPadding;}
 .faceInner			{overflow:hidden;.roundCorners(3px);border:1px solid @gray;}
 .faceInner img		{float:left;}
 .face p				{margin:0.2em 0 0;text-align:right;}
@@ -125,6 +126,61 @@ Main
 	//width:((@siteWidthFull/100) * 70) - (@globalPadding*2) - 2;
 	width:100%;overflow:hidden;
 }
+
+/* ----------------------------------------------------
+Homepage containers
+---------------------------------------------------- */
+#container {
+  clear: both;
+}
+.box {
+	float: left;
+	overflow:hidden;
+	color:@grayDark;
+	display:block;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	background-color:@white;
+	margin:1px;
+	display:table;
+	position: relative;
+    vertical-align: middle;
+    text-align:center;
+}
+	.box h4 {color:@grayDarker;}
+	.box:hover .boxInfo {
+		display:block;
+	}
+	
+	//.box img, .box canvas	{position:absolute;top:50%;left:50%;display:table;}
+	
+	.box.about				{background:@themeColor;}
+		.box.about:hover	{background:lighten(@themeColor, 10%);}
+	.box.topTitle			{background:none;}
+		.box.topTitle h1	{font-size:4em;text-transform:uppercase;margin-bottom:0;}
+		.box.topTitle h2	{text-transform:uppercase;font-weight:200;letter-spacing:3px;color:@bodyColor;}
+	.box.LTKD 				{background-image: url(../images/ltkd3.jpg);}
+	.box.bollard 			{background-image: url(../images/bollard1.jpg);}
+	.box.lastfmApp 			{background-image: url(../images/lastFM_ScreenCap_1.jpg);}
+
+.col1 { width:((@siteWidthFull/100) * 20) - 2;}
+.col2 { width:((@siteWidthFull/100) * 40) - 2;}
+.col3 { width:((@siteWidthFull/100) * 60) - 2;}
+.col4 { width:@siteWidthFull - 2;}
+
+.height1 {height:((@siteWidthFull/100) * 20) - 2;}
+.height2 {height:((@siteWidthFull/100) * 40) - 2;}
+.height3 {height:((@siteWidthFull/100) * 60) - 2;}
+
+.boxTitle {position: relative;display:table-cell;vertical-align:middle;width:100%;padding:5px;}
+	.boxTitle {color:@white;}
+
+.boxInfo {display:none;position:absolute;left:0;bottom:0;width:100%;text-align:center;background:rgba(255,255,255,0.8);padding:5px;}
+	.boxInfo p {margin-bottom:0;}
+
 /* -----------------------------------------------------------------------------------------
 Typography
 ----------------------------------------------------------------------------------------- */
@@ -146,7 +202,7 @@ Typography
   font-weight: normal;
   font-style: normal;
 }
-	.bollard {font-family:"bollard", "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;font-weight:normal;}
+	.bollardFont {font-family:"bollard", "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;font-weight:normal;}
 @font-face {
   font-family: 'chunkfive';
   src: 	url('../fonts/chunkfive-webfont.eot');
@@ -184,7 +240,6 @@ h4{
 	font-size:1.2em;
 	line-height:1.2;
 	margin-bottom:0.1em;
-	color:@bodyColor;
 }
 
 p,address	{margin-bottom:1.5em;font-size:1em;}
@@ -654,6 +709,19 @@ MEDIA QUERIES 600px
 		.side		{width:(@siteWidthMid/100) * 30 - 20;}
 	
 	.sideNav li a em		{}
+	
+	/* ----------------------------------------------------
+	Homepage containers
+	---------------------------------------------------- */
+	.col1 { width:((@siteWidthMid/100) * 25);}
+	.col2 { width:((@siteWidthMid/100) * 50);}
+	.col3 { width:((@siteWidthMid/100) * 75);}
+	.col4 { width:@siteWidthMid;}
+	
+	.height1 {height:((@siteWidthMid/100) * 25);background:@grayLight;}
+	.height2 {height:((@siteWidthMid/100) * 50);background:@grayDark;}
+	.height3 {height:((@siteWidthMid/100) * 75);background:@gray;}
+
 }
 /* -----------------------------------------------------------------------------------------
 MEDIA QUERIES Mobile
