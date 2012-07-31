@@ -40,6 +40,10 @@
     	<div class="containerInner">
 
 			<div class="span100">
+				<p>Paul should eat:</p>
+				<h1 class="quote"></h1>
+			</div>
+			<div class="span100">
 				<h1>I'm a designer, I create things&hellip;</h1>
 				<p>&hellip;Always have done ever since I broke out a box of crayons and drew all over the walls. Thankfully now I don't draw on walls, I design for fashion labels or throw out a typeface through my font foundry – Kraken.</p>
 				<p>I'll be found creating a UI for a webmail service using HTML5, CSS3 and {LESS}, or knocking up some advertising and web banners in the Adobe CS5 suite.</p>
@@ -67,7 +71,6 @@
 				<h2>Fonts ahoy!</h2>
 				<p>I love fonts, I'll tell you some great ones to use. I make fonts too, and sell them in my font foundry.</p>
 			</div>
-
 
 			<!-- Footer
 			================================================== -->
@@ -128,5 +131,12 @@
     <script src="../web_assets/js/bootstrap-carousel.js"></script>
     <script src="../web_assets/js/bootstrap-typeahead.js"></script>
     <script src="../web_assets/js/application.js"></script>
+    <script>
+    	$(document).ready(function() {
+		    var quotes = new Array("A Fucking Dragon Sandwich", "A Fucking Cheesesteak", "A Fucking Meatball Sub", "Some Fucking Spaghetti", "A Fucking Chicken Carbonara", "Some Fucking Chicken Parm", "A Fucking Pizza", "A Fucking Burrito", "A Fucking Bacon Cheeseburger", "Some Fucking Dumplings", "Some Fucking Dim Sum", "Some Fucking Chipotle Chicken", "Not Fucking Mac And Cheese Because It's Fucking Gross", "Some Fucking Chili", "A Fucking Chicken Bacon Ranch Sandwich", "A Fucking Buffalo Chicken Sandwich", "A Fucking Salad, Fatty!", "Some Fucking General Tsao's Chicken", "Some Fucking Steamed Pork Buns", "Some Fucking Singapore-Style Noodles", "Some Fucking Sweet-and-Sour Chicken", "Some Fucking Sesame Chicken", "Those Fucking Bacon-Wrapped Immitation Crab Meat On a Toothpick Things At The Chinese Buffet", "Some Fucking Meat On A Stick", "A Fucking Fat Sandwich From A Grease Truck At Rutgers", "A Real Fucking Cheesesteak From Fucking Philly", "Some Fucking Pasta Fagioli"),
+		    randno = quotes[Math.floor( Math.random() * quotes.length )];
+		    $('.quote').text( randno );
+		});
+    </script>
   </body>
 </html>
