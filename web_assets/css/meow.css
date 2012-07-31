@@ -1,10 +1,11 @@
 /* -----------------------------------------------------------------------------------------
 
-JAN 2012
+AUTHOR:		Paul Huxen
+DATE:		July 2012
 
 ----------------------------------------------------------------------------------------- */
 /* Reset.less
- * Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here	that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
+ * Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
  * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 html,
 body,
@@ -246,12 +247,7 @@ textarea {
   overflow: auto;
   vertical-align: top;
 }
-/* 6ec59a 7EB99C */
-/* f60 46a546 66ccff da5555*/
-body.kraken {
-  /* f60 46a546 66ccff da5555*/
-
-}
+/*#c84342;*/
 /* -----------------------------------------------------------------------------------------
 
 Useful classes
@@ -357,20 +353,102 @@ GLOBAL
 ========================================================================================= */
 html {
   font-size: 0.9em;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   line-height: 1.4;
 }
 body {
   min-height: 100%;
-  background: url(../images/bodyAllLines.jpg) repeat scroll #f5f5f5;
+  background: url(../images/bodyAllLines.jpg) repeat scroll #ffffff;
   overflow-x: hidden;
+  color: #808080;
+}
+/* =========================================================================================
+
+NAVIGATION
+
+========================================================================================= */
+.navbar {
+  background: #000000;
+  position: fixed;
+  width: 100%;
+  height: 30px;
+}
+.navbarInner {
+  width: 900px;
+  margin: 0 auto;
+}
+a.brand {
+  float: left;
+  padding: 5px 10px 5px 0;
+  color: #ffffff;
+  font-weight: bold;
+}
+.brand:hover {
+  text-decoration: none;
+}
+ul.nav {
+  float: left;
+}
+ul.nav li {
+  float: left;
+  padding: 5px 10px;
+}
+ul.nav li a {
   color: #bfbfbf;
+}
+ul.nav li:hover a {
+  text-decoration: none;
+  color: white;
+}
+/* =========================================================================================
+
+MAIN ELEMENTS
+
+========================================================================================= */.container {
+  padding-top: 30px;
+}
+.containerInner {
+  width: 900px;
+  margin: 0 auto;
+  background: #ebebeb;
+}
+/* =========================================================================================
+
+SPAN
+
+========================================================================================= */
+.span100 {
+  float: left;
+  width: 900px;
+  padding: 15px;
+}
+.span50 {
+  float: left;
+  width: 450px;
+  padding: 15px;
+}
+.span25 {
+  float: left;
+  width: 225px;
 }
 /* =========================================================================================
 
 TYPOGRAPHY
 
 ========================================================================================= */
+@font-face {
+  font-family: 'Pictos';
+  src: url('../icons/pictos-web.eot');
+  src: local('☺'), url('../icons/pictos-web.woff') format('woff'), url('../icons/pictos-web.ttf') format('truetype'), url('../icons/pictos-web.svg#webfontphKv1xv9') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.pictos {
+  font-family: "Pictos";
+  font-weight: normal;
+  line-height: 0;
+  text-shadow: none;
+}
 /* -------------------------------------------------------
 Headers
 ------------------------------------------------------- */
@@ -379,7 +457,7 @@ h2,
 h3,
 h4,
 h5 {
-  color: #ffffff;
+  color: #000000;
   font-weight: bold;
 }
 h1 {
@@ -411,19 +489,12 @@ address {
   font-size: 1em;
 }
 p + p {
-  text-indent: 1.2em;
   margin-top: -1em;
 }
 em {
   font-style: italic;
   font-weight: normal;
   font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-}
-h1 em,
-h2 em,
-h3 em {
-  color: #bfbfbf;
-  letter-spacing: 0;
 }
 strong {
   font-weight: bold;
@@ -468,7 +539,7 @@ BUTTONS
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  padding: 5px 15px 6px;
+  padding: 5px 15px 3px;
   border-style: solid;
   border-width: 0 0 3px;
   color: #333333;
@@ -645,4 +716,23 @@ BUTTONS
 .btnGroup .btn.active {
   top: 2px;
   border-bottom-width: 1px;
+}
+/* =========================================================================================
+
+MOBILE
+
+========================================================================================= */
+@media screen and (max-width: 740px) {
+  html {
+    font-size: 1em;
+  }
+  .navbarInner,
+  .containerInner {
+    width: 400px;
+  }
+  .span100,
+  .span50,
+  .span25 {
+    width: 400px;
+  }
 }

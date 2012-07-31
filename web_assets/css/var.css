@@ -1,5 +1,4 @@
-/* 6ec59a 7EB99C */
-/* f60 46a546 66ccff da5555*/
+/*#c84342;*/
 /* -----------------------------------------------------------------------------------------
 
 Useful classes
@@ -17,11 +16,20 @@ Useful classes
 .displayNone {
   display: none;
 }
+.paddingGlobal {
+  padding: 30px;
+}
 .padding30 {
   padding: 30px;
 }
 .padding20 {
   padding: 20px;
+}
+.padding10 {
+  padding: 10px;
+}
+.padding0 {
+  padding: 0px!important;
 }
 .globalPadding {
   padding: 30px;

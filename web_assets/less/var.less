@@ -18,7 +18,7 @@
 // Accent Colors
 @blue:              #049CDB;
 @blueDark:          #0064CD;
-@mint:				#7BF8D6;		/* 6ec59a 7EB99C */
+@mint:				#7BF8D6;
 @mintDark:			lighten(@mint, -15%);
 @green:             #46a546;
 @greenDark:       	lighten(@green, -12%);
@@ -29,19 +29,14 @@
 @pink:              #c3325f;
 @purple:            #7a43b6;
 
-	@themeColor:		@blue;	/* f60 46a546 66ccff da5555*/
+	@themeColor:		@blue; /*#c84342;*/
 	@themeColorDark:	lighten(@themeColor, -15%);
 	
-	body.kraken {
-		@themeColor:		@red;	/* f60 46a546 66ccff da5555*/
-		@themeColorDark:	lighten(@themeColor, -15%);
-	}
-	
-	@backgroundColor:	lighten(@black, 96%);
+	@backgroundColor:	#fff;
 	
 	// Typography
-	@headerColor:		@white;
-	@bodyColor:			@grayLight;
+	@headerColor:		@black;
+	@bodyColor:			@gray;
 	
 	// Links
 	@linkColor:         darken(@themeColor, 12%);
