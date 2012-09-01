@@ -1,8 +1,8 @@
-@siteWidthFull:					900px;
-	@siteWidthFullMargin:		960px;
-@siteWidthMid:					640px;
-	@siteWidthMidMargin:		740px;
-@siteWidthMob:					400px;
+@siteWidthFull:					600px;
+	@siteWidthFullMargin:		660px;
+@siteWidthMid:					400px;
+	@siteWidthMidMargin:		(@siteWidthFull + 20);
+@siteWidthMob:					300px;
 
 @globalPadding:			30px;
 
@@ -105,7 +105,7 @@ Useful classes
 .gradientBar(@primaryColor, @secondaryColor) {
   #gradient > .vertical(@primaryColor, @secondaryColor);
   /*text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
-  border-color: darken(@secondaryColor, 12%);
+  border-color: darken(@secondaryColor, 8%);
 }
 .noSelect {
     -webkit-touch-callout: none;
@@ -145,6 +145,9 @@ Useful classes
 .displayNone {
 	display:none;
 }
+.displayBlock {
+	display:block;
+}
 .paddingGlobal {
 	padding:@globalPadding;
 }
@@ -174,9 +177,16 @@ Useful classes
     height: 0;
     visibility: hidden;
 }
-.floatRight {float:right;}
+.floatRight 	{float:right;}
+.floatLeft		{float:left;}
+.floatCenter 	{margin:0 auto;}
+
+.alignCenter	{text-align:center;}
+
 /* -----------------------------------------------------------------------------------------
+
 ARROWS - I once was a designer but then I took an arrow to the knee
+
 ----------------------------------------------------------------------------------------- */
 .arrow-n,
 .arrow-e,

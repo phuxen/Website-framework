@@ -16,6 +16,9 @@ Useful classes
 .displayNone {
   display: none;
 }
+.displayBlock {
+  display: block;
+}
 .paddingGlobal {
   padding: 30px;
 }
@@ -48,8 +51,19 @@ Useful classes
 .floatRight {
   float: right;
 }
+.floatLeft {
+  float: left;
+}
+.floatCenter {
+  margin: 0 auto;
+}
+.alignCenter {
+  text-align: center;
+}
 /* -----------------------------------------------------------------------------------------
+
 ARROWS - I once was a designer but then I took an arrow to the knee
+
 ----------------------------------------------------------------------------------------- */
 .arrow-n,
 .arrow-e,

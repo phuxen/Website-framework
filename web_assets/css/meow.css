@@ -265,6 +265,9 @@ Useful classes
 .displayNone {
   display: none;
 }
+.displayBlock {
+  display: block;
+}
 .paddingGlobal {
   padding: 30px;
 }
@@ -297,8 +300,19 @@ Useful classes
 .floatRight {
   float: right;
 }
+.floatLeft {
+  float: left;
+}
+.floatCenter {
+  margin: 0 auto;
+}
+.alignCenter {
+  text-align: center;
+}
 /* -----------------------------------------------------------------------------------------
+
 ARROWS - I once was a designer but then I took an arrow to the knee
+
 ----------------------------------------------------------------------------------------- */
 .arrow-n,
 .arrow-e,
@@ -358,7 +372,11 @@ html {
 }
 body {
   min-height: 100%;
-  background: url(../images/bodyAllLines.jpg) repeat scroll #ffffff;
+  background: url(../img/bg.jpg) repeat fixed #ffffff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   overflow-x: hidden;
   color: #808080;
 }
@@ -371,17 +389,18 @@ NAVIGATION
   background: #000000;
   position: fixed;
   width: 100%;
-  height: 30px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
 }
 .navbarInner {
-  width: 900px;
+  width: 600px;
   margin: 0 auto;
 }
 a.brand {
   float: left;
-  padding: 5px 10px 5px 0;
+  padding: 15px 10px 15px 0;
   color: #ffffff;
-  font-weight: bold;
 }
 .brand:hover {
   text-decoration: none;
@@ -391,7 +410,7 @@ ul.nav {
 }
 ul.nav li {
   float: left;
-  padding: 5px 10px;
+  padding: 15px 10px;
 }
 ul.nav li a {
   color: #bfbfbf;
@@ -405,12 +424,47 @@ ul.nav li:hover a {
 MAIN ELEMENTS
 
 ========================================================================================= */.container {
-  padding-top: 30px;
+  width: 600px;
+  padding-top: 70px;
+  margin: 0 auto;
 }
 .containerInner {
-  width: 900px;
-  margin: 0 auto;
   background: #ebebeb;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  float: left;
+  margin: 0 0 30px;
+}
+pre {
+  margin: 0;
+  background: #333333;
+  border: 0;
+  color: #ffffff;
+  padding: 0 15px;
+  border: 1px dashed #808080;
+  font-family: Courier, monospace !important;
+  overflow: auto;
+}
+code {
+  margin: 30px;
+}
+/* =========================================================================================
+
+FOOTER
+
+========================================================================================= */
+.footer {
+  float: left;
+  padding: 15px 15px 5px;
+}
+.footer ul {
+  width: 100%;
+  float: left;
+}
+.footer ul li {
+  float: left;
+  padding: 0 10px 10px 0;
 }
 /* =========================================================================================
 
@@ -419,17 +473,17 @@ SPAN
 ========================================================================================= */
 .span100 {
   float: left;
-  width: 900px;
+  width: 600px;
   padding: 15px;
 }
 .span50 {
   float: left;
-  width: 450px;
+  width: 300px;
   padding: 15px;
 }
 .span25 {
   float: left;
-  width: 225px;
+  width: 150px;
 }
 /* =========================================================================================
 
@@ -541,7 +595,7 @@ BUTTONS
   border-radius: 3px;
   padding: 5px 15px 3px;
   border-style: solid;
-  border-width: 0 0 3px;
+  border-width: 1px;
   color: #333333;
   font-weight: bold;
   -webkit-transition: 0.1s linear all;
@@ -561,7 +615,7 @@ BUTTONS
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebebeb', endColorstr='#bfbfbf', GradientType=0);
   /*text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
 
-  border-color: #a1a1a1;
+  border-color: #ababab;
   text-shadow: 0 -1px 0 #d7d7d7;
   cursor: pointer;
   display: inline-block;
@@ -601,7 +655,7 @@ BUTTONS
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7bf8d6', endColorstr='#32f4bf', GradientType=0);
   /*text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
 
-  border-color: #0cdea4;
+  border-color: #0df1b3;
   text-shadow: 0 -1px 0 #585858;
 }
 .btn.info {
@@ -618,7 +672,7 @@ BUTTONS
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#036690', GradientType=0);
   /*text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
 
-  border-color: #023c54;
+  border-color: #024a68;
   text-shadow: 0 -1px 0 #003e68;
 }
 .btn.info .pictos {
@@ -638,7 +692,7 @@ BUTTONS
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c43c35', endColorstr='#942d28', GradientType=0);
   /*text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
 
-  border-color: #641f1b;
+  border-color: #74231f;
   text-shadow: 0 -1px 0 #6c0500;
 }
 .btn.alert .pictos {
@@ -699,7 +753,6 @@ BUTTONS
   border-radius: 0px;
   float: left;
   border-right-width: 1px;
-  position: relative;
 }
 .btnGroup .btn:first-child {
   -webkit-border-radius: 3px 0 0 3px;
@@ -710,11 +763,9 @@ BUTTONS
   -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
-  border-right-width: 0;
 }
 .btnGroup .btn:active,
 .btnGroup .btn.active {
-  top: 2px;
   border-bottom-width: 1px;
 }
 /* =========================================================================================
@@ -722,17 +773,23 @@ BUTTONS
 MOBILE
 
 ========================================================================================= */
-@media screen and (max-width: 740px) {
-  html {
-    font-size: 1em;
-  }
+@media screen and (max-width: 620px) {
   .navbarInner,
+  .container,
   .containerInner {
-    width: 400px;
+    width: 300px;
   }
   .span100,
   .span50,
   .span25 {
-    width: 400px;
+    width: 300px;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {
+  .div {
+    background: url(logo.png) no-repeat;
+    background-size: 100px 100px;
+    height: 100px;
+    width: 100px;
   }
 }
