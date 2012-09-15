@@ -157,7 +157,6 @@ blockquote:after {
   content: "";
 }
 html {
-  overflow-y: scroll;
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -372,12 +371,11 @@ html {
 }
 body {
   min-height: 100%;
-  background: url(../img/bg.jpg) repeat fixed #ffffff;
+  background: url(../img/2.jpg) repeat fixed #ffffff;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  overflow-x: hidden;
   color: #808080;
 }
 /* =========================================================================================
@@ -389,6 +387,7 @@ NAVIGATION
   background: #000000;
   position: fixed;
   width: 100%;
+  z-index: 2;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
@@ -429,7 +428,7 @@ MAIN ELEMENTS
   margin: 0 auto;
 }
 .containerInner {
-  background: #ebebeb;
+  background: #ffffff;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -456,14 +455,23 @@ FOOTER
 ========================================================================================= */
 .footer {
   float: left;
-  padding: 15px 15px 5px;
+  padding: 0 0 5px;
+  color: #ebebeb;
+  text-align: right;
+  width: 100%;
+}
+.footer a {
+  color: #ebebeb;
+}
+.footer a:hover {
+  color: #bfbfbf;
 }
 .footer ul {
   width: 100%;
   float: left;
 }
 .footer ul li {
-  float: left;
+  float: right;
   padding: 0 10px 10px 0;
 }
 /* =========================================================================================
@@ -484,6 +492,123 @@ SPAN
 .span25 {
   float: left;
   width: 150px;
+}
+.titleImage {
+  margin: 0 auto 1em;
+}
+.titleH1 {
+  margin-bottom: 0;
+}
+/* =========================================================================================
+
+SLIDER
+
+========================================================================================= */
+.bx-wrapper {
+  position: relative;
+}
+.bx-pager {
+  width: 600px;
+  padding: 0 30px 30px;
+  text-align: center;
+}
+a.pager-link {
+  background-color: #808080;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#bfbfbf), to(#808080));
+  background-image: -moz-linear-gradient(top, #bfbfbf, #808080);
+  background-image: -ms-linear-gradient(top, #bfbfbf, #808080);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bfbfbf), color-stop(100%, #808080));
+  background-image: -webkit-linear-gradient(top, #bfbfbf, #808080);
+  background-image: -o-linear-gradient(top, #bfbfbf, #808080);
+  background-image: linear-gradient(top, #bfbfbf, #808080);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bfbfbf', endColorstr='#808080', GradientType=0);
+  /*text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
+
+  border-color: #6b6b6b;
+  font-size: 0px;
+  padding: 6px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin: 0 2px;
+  outline: none;
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  -ms-transition: 0.1s linear all;
+  -o-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+}
+a.pager-active {
+  background-color: #036690;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#036690));
+  background-image: -moz-linear-gradient(top, #049cdb, #036690);
+  background-image: -ms-linear-gradient(top, #049cdb, #036690);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #036690));
+  background-image: -webkit-linear-gradient(top, #049cdb, #036690);
+  background-image: -o-linear-gradient(top, #049cdb, #036690);
+  background-image: linear-gradient(top, #049cdb, #036690);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#036690', GradientType=0);
+  /*text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
+
+  border-color: #024a68;
+  outline: none;
+}
+a.pager-link:hover {
+  background-position: 0 -5px;
+}
+a.pager-active:hover {
+  background-position: 0 -5px;
+}
+.bx-prev,
+.bx-next {
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  -ms-transition: 0.1s linear all;
+  -o-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+  font-family: "Pictos";
+  font-weight: normal;
+  line-height: 0;
+  text-shadow: none;
+  font-size: 30px;
+  color: #ffffff;
+  outline: none;
+  z-index: -2;
+}
+.bx-prev {
+  position: absolute;
+  top: 200px;
+  left: -32px;
+  height: 30px;
+  width: 60px;
+  overflow: hidden;
+  padding: 0 0 0 20px;
+}
+.bx-next {
+  position: absolute;
+  top: 200px;
+  right: -32px;
+  height: 30px;
+  width: 60px;
+  overflow: hidden;
+  padding: 0 20px 0 0;
+  text-align: right;
+}
+.bx-prev:focus,
+.bx-next:focus {
+  outline: none;
+}
+.bx-prev:hover {
+  text-decoration: none;
+  color: #bfbfbf;
+  left: -52px;
+}
+.bx-next:hover {
+  text-decoration: none;
+  color: #bfbfbf;
+  right: -52px;
 }
 /* =========================================================================================
 
@@ -508,10 +633,12 @@ Headers
 ------------------------------------------------------- */
 h1,
 h2,
-h3,
+h3 {
+  color: #000000;
+  font-weight: bold;
+}
 h4,
 h5 {
-  color: #000000;
   font-weight: bold;
 }
 h1 {
@@ -597,7 +724,7 @@ BUTTONS
   border-style: solid;
   border-width: 1px;
   color: #333333;
-  font-weight: bold;
+  font-weight: normal;
   -webkit-transition: 0.1s linear all;
   -moz-transition: 0.1s linear all;
   -ms-transition: 0.1s linear all;
@@ -773,23 +900,51 @@ BUTTONS
 MOBILE
 
 ========================================================================================= */
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 0.95em;
+  }
   .navbarInner,
   .container,
-  .containerInner {
-    width: 300px;
-  }
+  .containerInner,
   .span100,
   .span50,
-  .span25 {
-    width: 300px;
+  .span25,
+  .bx-pager {
+    width: 260px;
+  }
+  .bx-prev:hover {
+    text-decoration: none;
+    color: #bfbfbf;
+    left: -32px;
+  }
+  .bx-next:hover {
+    text-decoration: none;
+    color: #bfbfbf;
+    right: -32px;
   }
 }
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {
-  .div {
-    background: url(logo.png) no-repeat;
-    background-size: 100px 100px;
-    height: 100px;
-    width: 100px;
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  html {
+    font-size: 0.95em;
+  }
+  .navbarInner,
+  .container,
+  .containerInner,
+  .span100,
+  .span50,
+  .span25,
+  .bx-pager {
+    width: 320px;
+  }
+  .bx-prev:hover {
+    text-decoration: none;
+    color: #bfbfbf;
+    left: -32px;
+  }
+  .bx-next:hover {
+    text-decoration: none;
+    color: #bfbfbf;
+    right: -32px;
   }
 }

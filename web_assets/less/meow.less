@@ -20,12 +20,11 @@ html	{
 }
 body	{
 	min-height:100%;
-	background:url(../img/bg.jpg) repeat fixed @backgroundColor;
+	background:url(../img/2.jpg) repeat fixed @backgroundColor;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	overflow-x: hidden;
 	color:@bodyColor;
 }
 
@@ -34,7 +33,7 @@ body	{
 NAVIGATION
 
 ========================================================================================= */
-.navbar					{background:@black;position:fixed;width:100%;box-shadow:0 0 4px rgba(0, 0, 0, 0.7);-moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);-webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);}
+.navbar					{background:@black;position:fixed;width:100%;z-index:2;box-shadow:0 0 4px rgba(0, 0, 0, 0.7);-moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);-webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);}
 	.navbarInner		{width:@siteWidthFull;margin: 0 auto;}
 		a.brand			{float: left;padding:15px 10px 15px 0;color: @white;}
 		.brand:hover	{text-decoration: none;}
@@ -51,7 +50,7 @@ MAIN ELEMENTS
 ========================================================================================= */			
 .container				{width:@siteWidthFull;padding-top:70px;margin: 0 auto;}
 	.header				{}
-	.containerInner		{background:@grayLighter;.roundCorners(5px);float:left;margin:0 0 @globalPadding;}
+	.containerInner		{background:@white;.roundCorners(5px);float:left;margin:0 0 @globalPadding;}
 	
 		pre {
 			margin: 0;
@@ -70,9 +69,11 @@ MAIN ELEMENTS
 FOOTER
 
 ========================================================================================= */
-.footer					{float:left;padding:15px 15px 5px;}
+.footer					{float:left;padding:0 0 5px;color:@grayLighter;text-align:right;width:100%;}
+	.footer a			{color:@grayLighter;}
+	.footer a:hover		{color:@grayLight;}
 	.footer ul			{width:100%;float:left;}
-		.footer ul li	{float:left;padding:0 10px 10px 0;}
+		.footer ul li	{float:right;padding:0 10px 10px 0;}
 
 /* =========================================================================================
 
@@ -82,6 +83,37 @@ SPAN
 .span100				{float:left;width:@siteWidthFull;padding:15px;}
 .span50					{float:left;width:(@siteWidthFull/100)*50;padding:15px;}
 .span25					{float:left;width:(@siteWidthFull/100)*25;}
+
+.titleImage				{margin:0 auto 1em;}
+.titleH1				{margin-bottom:0;}
+
+/* =========================================================================================
+
+SLIDER
+
+========================================================================================= */
+.bx-wrapper				{position:relative;}
+	.bx-window			{}
+	
+		#slider1		{}
+			#slider1 li	{}
+
+
+.bx-pager				{width:@siteWidthFull;padding:0 @globalPadding @globalPadding;text-align:center;}
+	a.pager-link			{.gradientBar(@grayLight, @gray);font-size:0px;padding:6px;.roundCorners(10px);margin:0 2px;outline:none;.transition(.1s linear all);}
+	a.pager-active			{.gradientBar(@themeColor, @themeColorDark);outline:none;}
+	
+	a.pager-link:active		{}
+	a.pager-link:hover		{background-position: 0 -5px;}
+	a.pager-active:hover	{background-position: 0 -5px;}
+	
+.bx-prev, .bx-next		{.transition(.1s linear all);.pictos;font-size:30px;color:@white;outline:none;z-index:-2}	
+.bx-prev				{position:absolute;top:200px;left:-32px;height:30px;width:60px;overflow:hidden;padding:0 0 0 20px;}
+.bx-next				{position:absolute;top:200px;right:-32px;height:30px;width:60px;overflow:hidden;padding:0 20px 0 0;text-align:right;}
+.bx-prev:focus,
+.bx-next:focus			{outline:none;}
+.bx-prev:hover			{text-decoration:none;color:@grayLight;left:-52px;}
+.bx-next:hover			{text-decoration:none;color:@grayLight;right:-52px;}
 
 /* =========================================================================================
 
@@ -102,7 +134,8 @@ TYPOGRAPHY
 /* -------------------------------------------------------
 Headers
 ------------------------------------------------------- */
-h1, h2, h3, h4, h5	{color:@headerColor;font-weight:bold;}
+h1, h2, h3		{color:@headerColor;font-weight:bold;}
+h4, h5			{font-weight:bold;}
 h1{
 	font-size:2.2em;
 	line-height:1.2;
@@ -154,7 +187,7 @@ BUTTONS
 	border-style: solid;
 	border-width: 1px;
 	color:@grayDarker;
-	font-weight:bold;
+	font-weight:normal;
 	.transition(.1s linear all);
 	.gradientBar(@grayLighter, @grayLight);
 	text-shadow: 0 -1px 0 (@white - 40%);
@@ -248,22 +281,29 @@ MOBILE
 
 ========================================================================================= */
 
-@media screen and (max-width: @siteWidthMidMargin) {
-	html	{}
+@media screen and (max-width: 480px) {
+	html	{font-size:0.95em}
 		.navbarInner,
 		.container,
-		.containerInner	{width:@siteWidthMob;}
-		
+		.containerInner,
 		.span100,
 		.span50,
-		.span25				{width:@siteWidthMob;}
+		.span25,
+		.bx-pager			{width:260px;}
+		
+		.bx-prev:hover			{text-decoration:none;color:@grayLight;left:-32px;}
+		.bx-next:hover			{text-decoration:none;color:@grayLight;right:-32px;}
 }
-
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {
-.div { 
-    background: url(logo.png) no-repeat;
-    background-size: 100px 100px;
-    height: 100px;
-    width: 100px;
-}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+	html	{font-size:0.95em}
+		.navbarInner,
+		.container,
+		.containerInner,
+		.span100,
+		.span50,
+		.span25,
+		.bx-pager			{width:320px;}
+		
+		.bx-prev:hover			{text-decoration:none;color:@grayLight;left:-32px;}
+		.bx-next:hover			{text-decoration:none;color:@grayLight;right:-32px;}
 }

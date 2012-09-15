@@ -2,10 +2,14 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Home - Paul Huxen</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Huxen</title>
 		<meta name="description" content="">
 		<meta name="author" content="">
+		
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		
 		
 		<!-- Le styles -->
 		<link href="../web_assets/css/meow.css" rel="stylesheet">
@@ -17,11 +21,16 @@
 		<![endif]-->
 		
 		<!-- Le fav and touch icons -->
-		<link rel="shortcut icon" href="assets/ico/favicon.ico">
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-		<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+		<link rel="shortcut icon" href="../web_assets/ico/favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../web_assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../web_assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../web_assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="../web_assets/ico/apple-touch-icon-57-precomposed.png">
+		
+		<link rel="apple-touch-startup-image" sizes="1024x748" href="../web_assets/ico/splash-screen-1024x748.png" />
+		<link rel="apple-touch-startup-image" sizes="768x1004" href="../web_assets/ico/splash-screen-768x1024.png" />
+		<link rel="apple-touch-startup-image" href="../web_assets/ico/splash-screen-320x460.png" />
+		<link rel="apple-touch-startup-image" sizes="640x960" href="../web_assets/ico/splash-screen-640x960.png" />
 	</head>
 
 <body>
@@ -29,8 +38,7 @@
 		<div class="navbarInner">
 			<a class="brand" href="#">Paul<strong>Huxen</strong></a>
 			<ul class="nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#about">About</a></li>
+				<li class="active"><a href="">About</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</div>
@@ -41,19 +49,43 @@
     		<h1>Paul Huxen</h1>
     	</div>
     	<div class="containerInner">
-			<div class="span100 alignCenter">
-	    		<img class="floatCenter displayBlock" src="../web_assets/img/profilePhoto.png" alt="profilePhoto" width="200" height="200" />
-	    		<h1>Paul Huxen</h1>
-	    		<p>Graphic designer &amp; beard owner</p>
-	    	</div>
-			<div class="span100 displayNone">
-				<h4>Paul should eat:</h4>
-				<h1 class="quote"></h1>
-			</div>
+    		<ul id="slider1">
+    			<li>
+    				<div class="span100 alignCenter">
+			    		<img class="floatCenter displayBlock titleImage" src="../web_assets/img/profilePhoto.png" alt="profilePhoto" width="200" height="200" />
+			    		<h1 class="titleH1">Paul Huxen</h1>
+			    		<h5>Graphic designer &amp; beard owner</h5>
+			    	</div>
+			    	<div class="span100">
+			    		<p>Hello there, I'm a bit of a designer. Always have been ever since I broke out a box of crayons and drew all over the walls. Thankfully now I don't draw on walls, I design for <a href="kids.html" title="Let the Kids Dance" target="_parent">fashion labels</a> or throw out a typeface through my font foundry &ndash; <a href="http://www.krakenfoundry.co.uk" title="Kraken font foundry" target="_blank">Kraken</a>.</p>
+						<p>I'll be found creating a UI for a webmail service using <strong>HTML5, CSS3</strong> and <strong>{LESS}</strong>, or knocking up some advertising and web banners in the <strong>Adobe CS5 suite</strong>.</p>
+						<a href="#" class="btn">Lorem</a>
+						<a href="#" class="btn info">Clicky</a>
+						<a href="#" class="btn alert">Oh noes!</a>
+			    	</div>
+    			</li>
+    			<li>
+    				<div class="span100">
+						<h4>Paul should eat:</h4>
+						<h1 class="quote"></h1>
+						<a class="btn info floatRight">Lorem</a>
+					</div>
+    			</li>
+    			<li>
+    				<div class="span100">
+						<h4>Paul should eat:</h4>
+						<p>Hello there, I'm a bit of a designer. Always have been ever since I broke out a box of crayons and drew all over the walls. Thankfully now I don't draw on walls, I design for <a href="kids.html" title="Let the Kids Dance" target="_parent">fashion labels</a> or throw out a typeface through my font foundry &ndash; <a href="http://www.krakenfoundry.co.uk" title="Kraken font foundry" target="_blank">Kraken</a>.</p>
+						<p>I'll be found creating a UI for a webmail service using <strong>HTML5, CSS3</strong> and <strong>{LESS}</strong>, or knocking up some advertising and web banners in the <strong>Adobe CS5 suite</strong>.</p>
+					</div>
+    			</li>
+    		</ul>
+			
+		</div>
+		<div>
 			<!-- Footer
 			================================================== -->
 			<footer class="footer">
-				<ul>
+				<ul class="displayNone">
 					<li>
 						<a target="_blank" href="http://www.github.com/phuxen" title="I code sometimes…">Github</a>
 					</li>
@@ -95,22 +127,10 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     <script src="../web_assets/js/jquery.js"></script>
-    <script src="../web_assets/js/google-code-prettify/prettify.js"></script>
-    <script src="../web_assets/js/bootstrap-transition.js"></script>
-    <script src="../web_assets/js/bootstrap-alert.js"></script>
-    <script src="../web_assets/js/bootstrap-modal.js"></script>
-    <script src="../web_assets/js/bootstrap-dropdown.js"></script>
-    <script src="../web_assets/js/bootstrap-scrollspy.js"></script>
-    <script src="../web_assets/js/bootstrap-tab.js"></script>
-    <script src="../web_assets/js/bootstrap-tooltip.js"></script>
-    <script src="../web_assets/js/bootstrap-popover.js"></script>
-    <script src="../web_assets/js/bootstrap-button.js"></script>
-    <script src="../web_assets/js/bootstrap-collapse.js"></script>
-    <script src="../web_assets/js/bootstrap-carousel.js"></script>
-    <script src="../web_assets/js/bootstrap-typeahead.js"></script>
-    <script src="../web_assets/js/application.js"></script>
+    <script src="../web_assets/js/jquery.bxSlider.min.js"></script>
+    <script src="../web_assets/js/jquery.easing.1.3.js"></script>
+    <script src="../web_assets/js/meow.js"></script>
     <script>
     	$(document).ready(function() {
 		    var quotes = new Array("A Fucking Dragon Sandwich", "A Fucking Cheesesteak", "A Fucking Meatball Sub", "Some Fucking Spaghetti", "A Fucking Chicken Carbonara", "Some Fucking Chicken Parm", "A Fucking Pizza", "A Fucking Burrito", "A Fucking Bacon Cheeseburger", "Some Fucking Dumplings", "Some Fucking Dim Sum", "Some Fucking Chipotle Chicken", "Not Fucking Mac And Cheese Because It's Fucking Gross", "Some Fucking Chili", "A Fucking Chicken Bacon Ranch Sandwich", "A Fucking Buffalo Chicken Sandwich", "A Fucking Salad, Fatty!", "Some Fucking General Tsao's Chicken", "Some Fucking Steamed Pork Buns", "Some Fucking Singapore-Style Noodles", "Some Fucking Sweet-and-Sour Chicken", "Some Fucking Sesame Chicken", "Those Fucking Bacon-Wrapped Immitation Crab Meat On a Toothpick Things At The Chinese Buffet", "Some Fucking Meat On A Stick", "A Fucking Fat Sandwich From A Grease Truck At Rutgers", "A Real Fucking Cheesesteak From Fucking Philly", "Some Fucking Pasta Fagioli"),
