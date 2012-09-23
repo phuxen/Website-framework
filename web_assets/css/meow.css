@@ -342,22 +342,22 @@ ARROWS - I once was a designer but then I took an arrow to the knee
 .arrow-n {
   border-bottom-width: 1em;
   border-bottom-style: solid;
-  border-bottom-color: #049cdb;
+  border-bottom-color: #c3325f;
 }
 .arrow-e {
   border-left-width: 1em;
   border-left-style: solid;
-  border-left-color: #049cdb;
+  border-left-color: #c3325f;
 }
 .arrow-s {
   border-top-width: 1em;
   border-top-style: solid;
-  border-top-color: #049cdb;
+  border-top-color: #c3325f;
 }
 .arrow-w {
   border-right-width: 1em;
   border-right-style: solid;
-  border-right-color: #049cdb;
+  border-right-color: #c3325f;
 }
 /* =========================================================================================
 
@@ -401,8 +401,9 @@ a.brand {
   padding: 15px 10px 15px 0;
   color: #ffffff;
 }
-.brand:hover {
+a.brand:hover {
   text-decoration: none;
+  color: #c3325f;
 }
 ul.nav {
   float: left;
@@ -434,6 +435,11 @@ MAIN ELEMENTS
   border-radius: 5px;
   float: left;
   margin: 0 0 30px;
+  overflow: hidden;
+  /*-moz-box-shadow:    inset 0 0 10px @white;
+			-webkit-box-shadow: inset 0 0 10px @white;
+			box-shadow:         inset 0 0 10px @white;*/
+
 }
 pre {
   margin: 0;
@@ -499,9 +505,63 @@ SPAN
 .titleH1 {
   margin-bottom: 0;
 }
+.siteNotification {
+  border-top: 1px solid #808080;
+}
+.siteNotification p {
+  margin-bottom: 0;
+}
 /* =========================================================================================
 
-SLIDER
+SPAN
+
+========================================================================================= */
+.projectTopImage {
+  width: 600px;
+  height: 200px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+.rolloverBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+.rolloverWrapper {
+  position: relative;
+  float: left;
+  width: 25%;
+  overflow: hidden;
+}
+.rolloverBoxButton {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 80px;
+  width: 600px;
+  z-index: 5;
+  font-size: 3em;
+}
+.rolloverBoxButton a {
+  color: #ffffff;
+  -webkit-transition: 0.2s linear all;
+  -moz-transition: 0.2s linear all;
+  -ms-transition: 0.2s linear all;
+  -o-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+}
+.rolloverBoxButton a:hover {
+  color: #c3325f;
+  text-decoration: none;
+}
+/* =========================================================================================
+
+BX SLIDER
 
 ========================================================================================= */
 .bx-wrapper {
@@ -540,19 +600,19 @@ a.pager-link {
   transition: 0.1s linear all;
 }
 a.pager-active {
-  background-color: #036690;
+  background-color: #862241;
   background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#036690));
-  background-image: -moz-linear-gradient(top, #049cdb, #036690);
-  background-image: -ms-linear-gradient(top, #049cdb, #036690);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #036690));
-  background-image: -webkit-linear-gradient(top, #049cdb, #036690);
-  background-image: -o-linear-gradient(top, #049cdb, #036690);
-  background-image: linear-gradient(top, #049cdb, #036690);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#036690', GradientType=0);
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#c3325f), to(#862241));
+  background-image: -moz-linear-gradient(top, #c3325f, #862241);
+  background-image: -ms-linear-gradient(top, #c3325f, #862241);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c3325f), color-stop(100%, #862241));
+  background-image: -webkit-linear-gradient(top, #c3325f, #862241);
+  background-image: -o-linear-gradient(top, #c3325f, #862241);
+  background-image: linear-gradient(top, #c3325f, #862241);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c3325f', endColorstr='#862241', GradientType=0);
   /*text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
 
-  border-color: #024a68;
+  border-color: #661a32;
   outline: none;
 }
 a.pager-link:hover {
@@ -609,6 +669,61 @@ a.pager-active:hover {
   text-decoration: none;
   color: #bfbfbf;
   right: -52px;
+}
+/* =========================================================================================
+
+IOS SLIDER
+
+========================================================================================= */
+/* slider container */
+.iosSlider {
+  /* required */
+
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+/* slider */
+.iosSlider .slider {
+  /* required */
+
+  width: 100%;
+  height: auto;
+}
+/* slide */
+.iosSlider .slider .slide {
+  /* required */
+
+  float: left;
+  /*
+	overflow-x:hidden;
+	overflow-y:auto;
+	height:300px;
+	*/
+
+}
+.iosSliderButtons {
+  height: 40px;
+  width: 100px;
+  padding: 0;
+  float: none;
+  margin: 0 auto;
+}
+.iosSliderButtons .button {
+  float: left;
+  width: 10px;
+  height: 10px;
+  background: #999;
+  margin: 0 10px 0 0;
+  opacity: 0.25;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+.iosSliderButtons .selected {
+  background: #000;
+  opacity: 1;
 }
 /* =========================================================================================
 
@@ -681,11 +796,11 @@ strong {
   font-weight: bold;
 }
 a {
-  color: #03719f;
+  color: #c3325f;
   text-decoration: none;
 }
 a:hover {
-  color: #024e6d;
+  color: #9a284b;
   text-decoration: underline;
 }
 .superscript {
@@ -697,11 +812,11 @@ a:hover {
   font-size: 70%;
 }
 ::selection {
-  background: #049cdb;
+  background: #c3325f;
   color: #ffffff;
 }
 ::-moz-selection {
-  background: #049cdb;
+  background: #c3325f;
   color: #ffffff;
 }
 /* =========================================================================================
@@ -770,40 +885,40 @@ BUTTONS
 }
 .btn.success {
   color: #ffffff;
-  background-color: #32f4bf;
+  background-color: #0ab788;
   background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#7bf8d6), to(#32f4bf));
-  background-image: -moz-linear-gradient(top, #7bf8d6, #32f4bf);
-  background-image: -ms-linear-gradient(top, #7bf8d6, #32f4bf);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7bf8d6), color-stop(100%, #32f4bf));
-  background-image: -webkit-linear-gradient(top, #7bf8d6, #32f4bf);
-  background-image: -o-linear-gradient(top, #7bf8d6, #32f4bf);
-  background-image: linear-gradient(top, #7bf8d6, #32f4bf);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7bf8d6', endColorstr='#32f4bf', GradientType=0);
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#7bf8d6), to(#0ab788));
+  background-image: -moz-linear-gradient(top, #7bf8d6, #0ab788);
+  background-image: -ms-linear-gradient(top, #7bf8d6, #0ab788);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7bf8d6), color-stop(100%, #0ab788));
+  background-image: -webkit-linear-gradient(top, #7bf8d6, #0ab788);
+  background-image: -o-linear-gradient(top, #7bf8d6, #0ab788);
+  background-image: linear-gradient(top, #7bf8d6, #0ab788);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7bf8d6', endColorstr='#0ab788', GradientType=0);
   /*text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
 
-  border-color: #0df1b3;
+  border-color: #08906b;
   text-shadow: 0 -1px 0 #585858;
 }
 .btn.info {
   color: #ffffff;
-  background-color: #036690;
+  background-color: #862241;
   background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#036690));
-  background-image: -moz-linear-gradient(top, #049cdb, #036690);
-  background-image: -ms-linear-gradient(top, #049cdb, #036690);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #036690));
-  background-image: -webkit-linear-gradient(top, #049cdb, #036690);
-  background-image: -o-linear-gradient(top, #049cdb, #036690);
-  background-image: linear-gradient(top, #049cdb, #036690);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#036690', GradientType=0);
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#c3325f), to(#862241));
+  background-image: -moz-linear-gradient(top, #c3325f, #862241);
+  background-image: -ms-linear-gradient(top, #c3325f, #862241);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c3325f), color-stop(100%, #862241));
+  background-image: -webkit-linear-gradient(top, #c3325f, #862241);
+  background-image: -o-linear-gradient(top, #c3325f, #862241);
+  background-image: linear-gradient(top, #c3325f, #862241);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c3325f', endColorstr='#862241', GradientType=0);
   /*text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
 
-  border-color: #024a68;
-  text-shadow: 0 -1px 0 #003e68;
+  border-color: #661a32;
+  text-shadow: 0 -1px 0 #5e0019;
 }
 .btn.info .pictos {
-  text-shadow: 0 -1px 0 #003e68;
+  text-shadow: 0 -1px 0 #5e0019;
 }
 .btn.alert {
   color: #ffffff;

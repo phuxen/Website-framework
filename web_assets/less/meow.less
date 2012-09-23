@@ -36,7 +36,7 @@ NAVIGATION
 .navbar					{background:@black;position:fixed;width:100%;z-index:2;box-shadow:0 0 4px rgba(0, 0, 0, 0.7);-moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);-webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);}
 	.navbarInner		{width:@siteWidthFull;margin: 0 auto;}
 		a.brand			{float: left;padding:15px 10px 15px 0;color: @white;}
-		.brand:hover	{text-decoration: none;}
+		a.brand:hover	{text-decoration: none;color:@themeColor;}
 		ul.nav			{float: left;}
 		ul.nav li		{float: left;padding:15px 10px;}
 		ul.nav li a		{color: @grayLight}
@@ -50,7 +50,12 @@ MAIN ELEMENTS
 ========================================================================================= */			
 .container				{width:@siteWidthFull;padding-top:70px;margin: 0 auto;}
 	.header				{}
-	.containerInner		{background:@white;.roundCorners(5px);float:left;margin:0 0 @globalPadding;}
+	.containerInner		{
+			background:@white;.roundCorners(5px);float:left;margin:0 0 @globalPadding;overflow:hidden;
+			/*-moz-box-shadow:    inset 0 0 10px @white;
+			-webkit-box-shadow: inset 0 0 10px @white;
+			box-shadow:         inset 0 0 10px @white;*/
+		}
 	
 		pre {
 			margin: 0;
@@ -87,9 +92,26 @@ SPAN
 .titleImage				{margin:0 auto 1em;}
 .titleH1				{margin-bottom:0;}
 
+.siteNotification		{border-top:1px solid @gray;}
+	.siteNotification p	{margin-bottom:0;}
+	
+	
 /* =========================================================================================
 
-SLIDER
+SPAN
+
+========================================================================================= */
+.projectTopImage	{width:@siteWidthFull;height:200px;float:left;overflow:hidden;position:relative;}
+.rolloverBox		{position: absolute; top:0;left:0;width:@siteWidthFull;height:200px;background:rgba(0, 0, 0, 0.2);opacity:0;}
+	.rolloverWrapper	{position:relative;float:left;width:25%;overflow:hidden;}
+		
+		.rolloverBoxButton {left:0;position: absolute;text-align:center;top:80px;width:@siteWidthFull;z-index: 5;font-size:3em;}
+			.rolloverBoxButton a		{color:@white;.transition(.2s linear all);}
+			.rolloverBoxButton a:hover	{color:@themeColor;text-decoration:none;}
+
+/* =========================================================================================
+
+BX SLIDER
 
 ========================================================================================= */
 .bx-wrapper				{position:relative;}
@@ -114,6 +136,63 @@ SLIDER
 .bx-next:focus			{outline:none;}
 .bx-prev:hover			{text-decoration:none;color:@grayLight;left:-52px;}
 .bx-next:hover			{text-decoration:none;color:@grayLight;right:-52px;}
+
+
+/* =========================================================================================
+
+IOS SLIDER
+
+========================================================================================= */
+/* slider container */
+.iosSlider {
+	/* required */
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+/* slider */
+.iosSlider .slider {
+	/* required */
+	width: 100%;
+	height: auto;
+}
+
+/* slide */
+.iosSlider .slider .slide {
+	/* required */
+	float: left;
+	
+	/*
+	overflow-x:hidden;
+	overflow-y:auto;
+	height:300px;
+	*/
+}
+
+.iosSliderButtons {
+	height:40px;
+	width:100px;
+	padding:0;
+	float:none;
+	margin:0 auto;
+}
+
+.iosSliderButtons .button {
+	float: left;
+	width: 10px;
+	height: 10px;
+	background: #999;
+	margin: 0 10px 0 0;
+	opacity: 0.25;
+	.roundCorners(30px);
+}
+
+.iosSliderButtons .selected {
+	background: #000;
+	opacity: 1;
+}
 
 /* =========================================================================================
 

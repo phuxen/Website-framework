@@ -19,7 +19,7 @@
 @blue:              #049CDB;
 @blueDark:          #0064CD;
 @mint:				#7BF8D6;
-@mintDark:			lighten(@mint, -15%);
+@mintDark:			lighten(@mint, -35%);
 @green:             #46a546;
 @greenDark:       	lighten(@green, -12%);
 @red:               #c43c35;
@@ -29,7 +29,7 @@
 @pink:              #c3325f;
 @purple:            #7a43b6;
 
-	@themeColor:		@blue; /*#c84342;*/
+	@themeColor:		@pink; /*#c84342;*/
 	@themeColorDark:	lighten(@themeColor, -15%);
 	
 	@backgroundColor:	#fff;
@@ -39,7 +39,7 @@
 	@bodyColor:			@gray;
 	
 	// Links
-	@linkColor:         darken(@themeColor, 12%);
+	@linkColor:         @themeColor;
 	@linkColorHover:    darken(@linkColor, 10%);
 	
 	// Navigation
