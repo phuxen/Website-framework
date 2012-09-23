@@ -58,33 +58,11 @@ $(document).ready(function($){
 		'speedOut'		:	200, 
 		'overlayShow'	:	true,
 		'titlePosition'	:	'over',
-		'titleShow'		:	false
-	});
-	
-	$("a.fancyBoxGallery").fancybox({
-		'transitionIn'	:	'fade',
-		'transitionOut'	:	'fade',
-		'speedIn'		:	600, 
-		'speedOut'		:	200, 
-		'overlayShow'	:	true,
-		'titlePosition'	:	'over',
-		'titleShow'		:	true,
-		'showNavArrows'	:	true
-	});
-	
-	$("a.fancyBoxText").fancybox({
-		'transitionIn'	:	'fade',
-		'transitionOut'	:	'fade',
-		'speedIn'		:	600, 
-		'speedOut'		:	200, 
-		'overlayShow'	:	true,
-		'titlePosition'	:	'over',
 		'titleShow'		:	false,
-		'type' 			: 	'iframe',
-		'width'			:	300,
-		'height'		:	220
+		'overlayOpacity':	0.6,
+		'overlayColor'	:	'#2b2b2b'
 	});
-	
+		
 	$(function() {
 	    var quotes = new Array(
 	    "A Fucking Dragon Sandwich",
