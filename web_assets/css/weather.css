@@ -41,6 +41,7 @@ sup,
 var,
 b,
 i,
+a,
 dl,
 dt,
 dd,
@@ -89,6 +90,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 h1,
 h2,
@@ -347,22 +349,22 @@ ARROWS - I once was a designer but then I took an arrow to the knee
 .arrow-n {
   border-bottom-width: 1em;
   border-bottom-style: solid;
-  border-bottom-color: #c3325f;
+  border-bottom-color: #049cdb;
 }
 .arrow-e {
   border-left-width: 1em;
   border-left-style: solid;
-  border-left-color: #c3325f;
+  border-left-color: #049cdb;
 }
 .arrow-s {
   border-top-width: 1em;
   border-top-style: solid;
-  border-top-color: #c3325f;
+  border-top-color: #049cdb;
 }
 .arrow-w {
   border-right-width: 1em;
   border-right-style: solid;
-  border-right-color: #c3325f;
+  border-right-color: #049cdb;
 }
 /* =========================================================================================
 
@@ -376,7 +378,7 @@ html {
 }
 body {
   min-height: 100%;
-  background: url(../img/weather.jpg) repeat fixed #ffffff;
+  background: url(../img/weather.jpg) repeat fixed #dddddd;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -515,13 +517,13 @@ strong {
   font-weight: bold;
 }
 a {
-  color: #c3325f;
+  color: #049cdb;
   text-decoration: none;
 }
 a:hover {
-  color: #9a284b;
+  color: #0378a9;
   text-decoration: underline;
 }
 .highlight {
-  color: #c3325f;
+  color: #049cdb;
 }

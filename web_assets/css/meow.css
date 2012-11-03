@@ -41,6 +41,7 @@ sup,
 var,
 b,
 i,
+a,
 dl,
 dt,
 dd,
@@ -89,6 +90,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 h1,
 h2,
@@ -347,22 +349,22 @@ ARROWS - I once was a designer but then I took an arrow to the knee
 .arrow-n {
   border-bottom-width: 1em;
   border-bottom-style: solid;
-  border-bottom-color: #c3325f;
+  border-bottom-color: #049cdb;
 }
 .arrow-e {
   border-left-width: 1em;
   border-left-style: solid;
-  border-left-color: #c3325f;
+  border-left-color: #049cdb;
 }
 .arrow-s {
   border-top-width: 1em;
   border-top-style: solid;
-  border-top-color: #c3325f;
+  border-top-color: #049cdb;
 }
 .arrow-w {
   border-right-width: 1em;
   border-right-style: solid;
-  border-right-color: #c3325f;
+  border-right-color: #049cdb;
 }
 /* =========================================================================================
 
@@ -370,13 +372,12 @@ GLOBAL
 
 ========================================================================================= */
 html {
-  font-size: 0.9em;
+  font-size: 0.95em;
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.4;
 }
 body {
-  min-height: 100%;
-  background: url(../img/2.jpg) repeat fixed #ffffff;
+  background: url(../img/backgrounds/2.jpg) repeat fixed #dddddd;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -389,33 +390,46 @@ NAVIGATION
 
 ========================================================================================= */
 .navbar {
-  background: #000000;
+  background-color: #1a1a1a;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#333333), to(#1a1a1a));
+  background-image: -moz-linear-gradient(top, #333333, #1a1a1a);
+  background-image: -ms-linear-gradient(top, #333333, #1a1a1a);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #1a1a1a));
+  background-image: -webkit-linear-gradient(top, #333333, #1a1a1a);
+  background-image: -o-linear-gradient(top, #333333, #1a1a1a);
+  background-image: linear-gradient(top, #333333, #1a1a1a);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#1a1a1a', GradientType=0);
+  /*text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
+
+  border-color: #060606;
+  border-bottom: 1px solid #121212;
   position: fixed;
   width: 100%;
   z-index: 2;
+  height: 44px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
 }
 .navbarInner {
-  width: 600px;
-  margin: 0 auto;
+  margin: 0;
 }
 a.brand {
   float: left;
-  padding: 15px 10px 15px 0;
+  padding: 12px 10px 0 20px;
   color: #ffffff;
 }
 a.brand:hover {
   text-decoration: none;
-  color: #c3325f;
+  color: #ffffff;
 }
 ul.nav {
   float: left;
 }
 ul.nav li {
   float: left;
-  padding: 15px 10px;
+  padding: 12px 10px 0;
 }
 ul.nav li a {
   color: #bfbfbf;
@@ -429,17 +443,14 @@ ul.nav li:hover a {
 MAIN ELEMENTS
 
 ========================================================================================= */.container {
-  width: 600px;
-  padding-top: 70px;
-  margin: 0 auto;
+  width: 100%;
+  min-height: 100%;
 }
 .containerInner {
-  background: #ffffff;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  /*.roundCorners(5px);*/
+
   float: left;
-  margin: 0 0 30px;
+  padding: 44px 0 0;
   overflow: hidden;
   /*-moz-box-shadow:    inset 0 0 10px @white;
 			-webkit-box-shadow: inset 0 0 10px @white;
@@ -527,6 +538,24 @@ SPAN
   float: left;
   overflow: hidden;
   position: relative;
+  border-bottom: 1px solid #808080;
+}
+.projectTopImage.bollard {
+  background: url(../img/type/bollardLarge.jpg) scroll -95px -71px;
+}
+.projectTopImage.LTKD {
+  background: url(../img/LTKD/ltkd4BW.jpg) scroll 0 -120px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 350px;
+}
+.projectTopImage.LTKD .rolloverBox {
+  height: 350px;
+}
+.projectTopImage.LTKD .rolloverBox .rolloverBoxButton {
+  top: 150px;
 }
 .rolloverBox {
   position: absolute;
@@ -561,119 +590,26 @@ SPAN
   transition: 0.2s linear all;
 }
 .rolloverBoxButton a:hover {
-  color: #c3325f;
+  color: #049cdb;
   text-decoration: none;
 }
-/* =========================================================================================
-
-BX SLIDER
-
-========================================================================================= */
-.bx-wrapper {
-  position: relative;
-}
-.bx-pager {
+.purchaseInfoBox {
   width: 600px;
-  padding: 0 30px 30px;
-  text-align: center;
+  background: #ebebeb;
+  float: left;
+  border-top: 1px solid #bfbfbf;
+  padding: 15px 15px 0;
 }
-a.pager-link {
-  background-color: #808080;
-  background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#bfbfbf), to(#808080));
-  background-image: -moz-linear-gradient(top, #bfbfbf, #808080);
-  background-image: -ms-linear-gradient(top, #bfbfbf, #808080);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bfbfbf), color-stop(100%, #808080));
-  background-image: -webkit-linear-gradient(top, #bfbfbf, #808080);
-  background-image: -o-linear-gradient(top, #bfbfbf, #808080);
-  background-image: linear-gradient(top, #bfbfbf, #808080);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bfbfbf', endColorstr='#808080', GradientType=0);
-  /*text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
-
-  border-color: #6b6b6b;
-  font-size: 0px;
-  padding: 6px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  margin: 0 2px;
-  outline: none;
-  -webkit-transition: 0.1s linear all;
-  -moz-transition: 0.1s linear all;
-  -ms-transition: 0.1s linear all;
-  -o-transition: 0.1s linear all;
-  transition: 0.1s linear all;
+.purchaseInfoBox .info {
+  width: 40%;
+  float: left;
 }
-a.pager-active {
-  background-color: #862241;
-  background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#c3325f), to(#862241));
-  background-image: -moz-linear-gradient(top, #c3325f, #862241);
-  background-image: -ms-linear-gradient(top, #c3325f, #862241);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c3325f), color-stop(100%, #862241));
-  background-image: -webkit-linear-gradient(top, #c3325f, #862241);
-  background-image: -o-linear-gradient(top, #c3325f, #862241);
-  background-image: linear-gradient(top, #c3325f, #862241);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c3325f', endColorstr='#862241', GradientType=0);
-  /*text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
-
-  border-color: #661a32;
-  outline: none;
+.purchaseInfoBox .button {
+  width: 60%;
+  float: left;
 }
-a.pager-link:hover {
-  background-position: 0 -5px;
-}
-a.pager-active:hover {
-  background-position: 0 -5px;
-}
-.bx-prev,
-.bx-next {
-  -webkit-transition: 0.1s linear all;
-  -moz-transition: 0.1s linear all;
-  -ms-transition: 0.1s linear all;
-  -o-transition: 0.1s linear all;
-  transition: 0.1s linear all;
-  font-family: "Pictos";
-  font-weight: normal;
-  line-height: 0;
-  text-shadow: none;
-  font-size: 30px;
-  color: #ffffff;
-  outline: none;
-  z-index: -2;
-}
-.bx-prev {
-  position: absolute;
-  top: 200px;
-  left: -32px;
-  height: 30px;
-  width: 60px;
-  overflow: hidden;
-  padding: 0 0 0 20px;
-}
-.bx-next {
-  position: absolute;
-  top: 200px;
-  right: -32px;
-  height: 30px;
-  width: 60px;
-  overflow: hidden;
-  padding: 0 20px 0 0;
-  text-align: right;
-}
-.bx-prev:focus,
-.bx-next:focus {
-  outline: none;
-}
-.bx-prev:hover {
-  text-decoration: none;
-  color: #bfbfbf;
-  left: -52px;
-}
-.bx-next:hover {
-  text-decoration: none;
-  color: #bfbfbf;
-  right: -52px;
+.purchaseInfoBox .button .btn {
+  width: 100%;
 }
 /* =========================================================================================
 
@@ -687,32 +623,40 @@ IOS SLIDER
   position: relative;
   top: 0;
   left: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  /* optional */
+
+  width: 100%;
+  height: 100%;
 }
 /* slider */
 .iosSlider .slider {
   /* required */
 
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 /* slide */
 .iosSlider .slider .slide {
   /* required */
 
   float: left;
-  /*
-	overflow-x:hidden;
-	overflow-y:auto;
-	height:300px;
-	*/
-
+  /* optional */
+  width: 600px;
+  background: #ffffff;
+  margin: 0 20px 20px 20px;
+  padding: 44px 0 0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
 }
 .iosSliderButtons {
-  height: 40px;
-  width: 100px;
-  padding: 0;
-  float: none;
+  padding: 15px 20px 0 0;
+  float: right;
   margin: 0 auto;
 }
 .iosSliderButtons .button {
@@ -727,7 +671,7 @@ IOS SLIDER
   border-radius: 30px;
 }
 .iosSliderButtons .selected {
-  background: #000;
+  background: #fff;
   opacity: 1;
 }
 /* =========================================================================================
@@ -801,11 +745,11 @@ strong {
   font-weight: bold;
 }
 a {
-  color: #c3325f;
+  color: #049cdb;
   text-decoration: none;
 }
 a:hover {
-  color: #9a284b;
+  color: #0378a9;
   text-decoration: underline;
 }
 .superscript {
@@ -817,11 +761,11 @@ a:hover {
   font-size: 70%;
 }
 ::selection {
-  background: #c3325f;
+  background: #049cdb;
   color: #ffffff;
 }
 ::-moz-selection {
-  background: #c3325f;
+  background: #049cdb;
   color: #ffffff;
 }
 /* =========================================================================================
@@ -864,9 +808,11 @@ BUTTONS
 
   border-color: #ababab;
   text-shadow: 0 -1px 0 #d7d7d7;
+  text-align: center;
   cursor: pointer;
   display: inline-block;
   margin-bottom: 5px;
+  text-transform: uppercase;
   /* Icons */
 
   /* Lets look at our peusdo classes */
@@ -882,8 +828,11 @@ BUTTONS
 }
 .btn.large {
   padding: 10px 20px;
-  font-size: 1.3em;
+  font-size: 1.2em;
   margin-bottom: 0.2em;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
 }
 .btn.large:hover {
   background-position: 0 -30px;
@@ -907,23 +856,23 @@ BUTTONS
 }
 .btn.info {
   color: #ffffff;
-  background-color: #862241;
+  background-color: #036690;
   background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#c3325f), to(#862241));
-  background-image: -moz-linear-gradient(top, #c3325f, #862241);
-  background-image: -ms-linear-gradient(top, #c3325f, #862241);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c3325f), color-stop(100%, #862241));
-  background-image: -webkit-linear-gradient(top, #c3325f, #862241);
-  background-image: -o-linear-gradient(top, #c3325f, #862241);
-  background-image: linear-gradient(top, #c3325f, #862241);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c3325f', endColorstr='#862241', GradientType=0);
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#036690));
+  background-image: -moz-linear-gradient(top, #049cdb, #036690);
+  background-image: -ms-linear-gradient(top, #049cdb, #036690);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #036690));
+  background-image: -webkit-linear-gradient(top, #049cdb, #036690);
+  background-image: -o-linear-gradient(top, #049cdb, #036690);
+  background-image: linear-gradient(top, #049cdb, #036690);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#036690', GradientType=0);
   /*text-shadow: 0 -1px 0 rgba(0,0,0,.25);*/
 
-  border-color: #661a32;
-  text-shadow: 0 -1px 0 #5e0019;
+  border-color: #024a68;
+  text-shadow: 0 -1px 0 #003e68;
 }
 .btn.info .pictos {
-  text-shadow: 0 -1px 0 #5e0019;
+  text-shadow: 0 -1px 0 #003e68;
 }
 .btn.alert {
   color: #ffffff;
@@ -1020,51 +969,36 @@ BUTTONS
 MOBILE
 
 ========================================================================================= */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .span100,
+  .span50,
+  .span25,
+  .bx-pager {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 480px) {
   html {
-    font-size: 0.95em;
+    font-size: 1.1em;
   }
-  .navbarInner,
-  .container,
-  .containerInner,
   .span100,
   .span50,
   .span25,
   .bx-pager {
-    width: 260px;
+    width: 100%;
   }
-  .bx-prev:hover {
-    text-decoration: none;
-    color: #bfbfbf;
-    left: -32px;
-  }
-  .bx-next:hover {
-    text-decoration: none;
-    color: #bfbfbf;
-    right: -32px;
+  .iosSlider .slider .slide {
+    margin-right: 20px;
   }
 }
+/*
 @media screen and (min-width: 481px) and (max-width: 767px) {
-  html {
-    font-size: 0.95em;
-  }
-  .navbarInner,
-  .container,
-  .containerInner,
-  .span100,
-  .span50,
-  .span25,
-  .bx-pager {
-    width: 320px;
-  }
-  .bx-prev:hover {
-    text-decoration: none;
-    color: #bfbfbf;
-    left: -32px;
-  }
-  .bx-next:hover {
-    text-decoration: none;
-    color: #bfbfbf;
-    right: -32px;
-  }
-}
+	html	{font-size:1.1em}
+		.span100,
+		.span50,
+		.span25,
+		.bx-pager			{
+								width:@siteWidthMob;
+							}
+		
+}*/

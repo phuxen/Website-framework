@@ -822,7 +822,8 @@
 						zIndex: settings.stageCSS.zIndex,
 						'webkitPerspective': 1000,
 						'webkitBackfaceVisibility': 'hidden',
-						width: stageWidth
+						// Removed settings so we can control this via CSS instead
+						//width: stageWidth
 					});
 					
 					$(settings.unselectableSelector).css({
@@ -949,7 +950,7 @@
 						});
 						
 						if(settings.scrollbarLocation == 'top') {
-							$('.' + scrollbarBlockClass).css('top', '0');
+							$('.' + scrollbarBlockClass).css('top', '44px');
 						} else {
 							$('.' + scrollbarBlockClass).css('bottom', '0');
 						}

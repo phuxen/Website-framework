@@ -20,7 +20,7 @@
 		<script type="text/javascript" src="../web_assets/fancybox/jquery.fancybox-1.3.1.js"></script>
 		<script type="text/javascript" src="../web_assets/fancybox/jquery.easing-1.3.pack.js"></script>
 		<!-- Slider -->
-		<script src="../web_assets/js/jquery.iosslider.min.js"></script>
+		<script src="../web_assets/js/jquery.iosslider.js"></script>
 		<!-- Other -->
 		<script src="../web_assets/js/meow.js"></script>
 		
@@ -50,89 +50,24 @@
 				<li class="active"><a href="">Résumé</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
+			<ul class="iosSliderButtons">
+				<li class="button"></li>
+				<li class="button"></li>
+				<li class="button"></li>
+				<li class="button"></li>
+				<li class="button"></li>
+			</ul>
 		</div>
     </div>
-
     <div class="container">
-    	<div class="header displayNone">
-    		<h1>Paul Huxen</h1>
-    	</div>
-    	<div class="containerInner">
-    		<div class = 'iosSlider'>
-
-				<!-- slider -->
-				<div class = 'slider'>
-					<!-- slides -->
-					
-					<div class = 'slide'>
-						<div class="span100 alignCenter">
-				    		<img class="floatCenter displayBlock titleImage" src="../web_assets/img/profilePhoto.png" alt="profilePhoto" width="200" height="200" />
-				    		<h1 class="titleH1">Paul Huxen</h1>
-				    		<h5>Graphic designer &amp; beard owner</h5>
-				    	</div>
-				    	<div class="span100">
-				    		<p>Hello there, I'm a bit of a designer. Always have been ever since I broke out a box of crayons and drew all over the walls. Thankfully now I don't draw on walls, I design for <a href="kids.html" title="Let the Kids Dance" target="_parent">fashion labels</a> or throw out a typeface through my font foundry &ndash; <a href="http://www.krakenfoundry.co.uk" title="Kraken font foundry" target="_blank">Kraken</a>.</p>
-							<p>I'll be found creating a UI for a webmail service using <strong>HTML5, CSS3</strong> and <strong>{LESS}</strong>, or knocking up some advertising and web banners in the <strong>Adobe CS5 suite</strong>.</p>
-							<a href="#" class="btn info">Clicky</a>
-							<!--
-							<a href="#" class="btn">Lorem</a>
-							<a href="#" class="btn info">Clicky</a>
-							<a href="#" class="btn alert">Oh noes!</a>
-							-->
-				    	</div>
-				    	<div class="span100 alignCenter siteNotification">
-				    		<p><em>To browse this piece of the web just click/touch and drag your way through the slide. Simple!</em></p>
-				    	</div>
-					</div>
-					
-					
-					<div class = 'slide'>
-						<div class="projectTopImage tower">
-							<div class="rolloverBox">
-								<div class="rolloverBoxButton">
-									<a class="fancyBoxImg pictos" href="../web_assets/img/LTKD/ltkd3.jpg" title="View a larger image">+</a>
-								</div>
-							</div>
-							<img class="floatCenter displayBlock titleImage" src="../web_assets/img/LTKD/ltkd3BW.jpg" alt="ltkd3BW" width="600" />
-						</div>
-						<div class="span100">
-							<h1>Lacus scelerisque nisi</h1>
-							<p>Vestibulum mollis mollis felis, sit amet aliquet quam rutrum et. Cras nisl ligula, tristique ac faucibus eget, pretium dapibus massa. Suspendisse convallis rhoncus commodo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nec odio vitae nunc viverra dapibus quis in felis. Duis semper elit nec augue aliquet placerat. Vestibulum facilisis lacus scelerisque nisi rutrum vitae vehicula libero egestas.</p>
-						</div>
-					</div>
-					
-					
-					<div class = 'slide'>
-						<div class="projectTopImage tower">
-							<div class="rolloverBox">
-								<div class="rolloverBoxButton">
-									<a class="fancyBoxImg pictos" href="http://placekitten.com/200/300" title="View a larger image">+</a>
-								</div>
-							</div>
-							<img class="floatCenter displayBlock titleImage" src="http://placekitten.com/600/200" alt="Project goes here" width="600" />
-						</div>
-						<div class="span100">
-							<h1>Lacus scelerisque nisi</h1>
-							<p>Vestibulum mollis mollis felis, sit amet aliquet quam rutrum et. Cras nisl ligula, tristique ac faucibus eget, pretium dapibus massa. Suspendisse convallis rhoncus commodo.</p>
-						</div>
-					</div>
-					
-					
-				</div>
-				<div class = 'iosSliderButtons'>
-					<div class = 'button'></div>
-					<div class = 'button'></div>
-					<div class = 'button'></div>
-					<div class = 'button'></div>
-					<div class = 'button'></div>
-				</div>
-			
-			</div>
-			
-			
-    		<ul id="slider1" class="displayNone">
-    			<li>
-    				<div class="span100 alignCenter">
+		<div class = 'iosSlider'>
+	
+			<!-- slider -->
+			<div class = 'slider'>
+				
+				<!-- Slide 1 -->
+				<div class = 'slide'>
+					<div class="span100 alignCenter">
 			    		<img class="floatCenter displayBlock titleImage" src="../web_assets/img/profilePhoto.png" alt="profilePhoto" width="200" height="200" />
 			    		<h1 class="titleH1">Paul Huxen</h1>
 			    		<h5>Graphic designer &amp; beard owner</h5>
@@ -140,66 +75,90 @@
 			    	<div class="span100">
 			    		<p>Hello there, I'm a bit of a designer. Always have been ever since I broke out a box of crayons and drew all over the walls. Thankfully now I don't draw on walls, I design for <a href="kids.html" title="Let the Kids Dance" target="_parent">fashion labels</a> or throw out a typeface through my font foundry &ndash; <a href="http://www.krakenfoundry.co.uk" title="Kraken font foundry" target="_blank">Kraken</a>.</p>
 						<p>I'll be found creating a UI for a webmail service using <strong>HTML5, CSS3</strong> and <strong>{LESS}</strong>, or knocking up some advertising and web banners in the <strong>Adobe CS5 suite</strong>.</p>
-						<a href="#" class="btn">Lorem</a>
 						<a href="#" class="btn info">Clicky</a>
-						<a href="#" class="btn alert">Oh noes!</a>
 			    	</div>
-    			</li>
-    			<li>
-    				<div class="span100">
-						<h4>Paul should eat:</h4>
-						<h1 class="quote"></h1>
-						<a class="btn info">Lorem</a>
+			    	<div class="span100 alignCenter siteNotification">
+			    		<p><em>To browse this piece of the web just click/touch and drag your way through the slide. Simple!</em></p>
+			    	</div>
+				</div>
+				
+				<!-- Slide 2 -->
+				<div class = 'slide'>
+					<div class="projectTopImage bollard">
+						<div class="rolloverBox">
+							<div class="rolloverBoxButton">
+								<a class="fancyBoxImg pictos" href="../web_assets/img/type/bollardLarge.jpg" title="View a larger image">+</a>
+							</div>
+						</div>
+						<!--
+						<img class="floatCenter displayBlock titleImage" src="../web_assets/img/LTKD/ltkd3BW.jpg" alt="ltkd3BW" width="600" />
+						-->
 					</div>
-    			</li>
-    			<li>
-    				<div class="span100">
-						<h4>Paul should eat:</h4>
-						<p>Hello there, I'm a bit of a designer. Always have been ever since I broke out a box of crayons and drew all over the walls. Thankfully now I don't draw on walls, I design for <a href="kids.html" title="Let the Kids Dance" target="_parent">fashion labels</a> or throw out a typeface through my font foundry &ndash; <a href="http://www.krakenfoundry.co.uk" title="Kraken font foundry" target="_blank">Kraken</a>.</p>
-						<p>I'll be found creating a UI for a webmail service using <strong>HTML5, CSS3</strong> and <strong>{LESS}</strong>, or knocking up some advertising and web banners in the <strong>Adobe CS5 suite</strong>.</p>
+					<div class="span100">
+						<h1>Bollard</h1>
+						<p>Bollard is a fat and cuddly sans serif typeface which was created during typographic experiments with simple shapes and elements. I had seen many fat fonts however these were still all quite angular and didn't have the softer appearance that I craved. So I took it upon myself to construct this font made of circles and gentle curved corners and unleashed it into the wild a few months later.</p>
 					</div>
-    			</li>
-    		</ul>
-		</div><!-- /containerInner -->
-		<div>
-			<!-- Footer
-			================================================== -->
-			<footer class="footer">
-				<ul class="displayNone">
-					<li>
-						<a target="_blank" href="http://www.github.com/phuxen" title="I code sometimes…">Github</a>
-					</li>
-					<li>
-						<a target="_blank" href="http://www.last.fm/user/twiggy8520" title="Compare our music tastes on Last.fm">Last.fm</a>
-					</li>
-					<li>
-						<a target="_blank" href="http://www.linkedin.com/in/paulhuxen" title="Visit my LinkedIn profile">LinkedIn</a>
-					</li>
-					<li>
-						<a target="_blank" href="http://www.facebook.com/phuxen" title="View Facebook profile">Facebook</a>
-					</li>
-					<li>
-						<a target="_blank" href="http://www.flickr.com/photos/twiggy8520/" title="View photos on Flickr">Flickr</a>
-					</li>
-					<li>
-						<a target="_blank" href="http://foursquare.com/phuxen" title="Stalk me on Foursquare">Foursquare</a>
-					</li>
-					<li>
-						<a target="_blank" href="http://www.soundcloud.com/gillsanseric" title="Listen to my music">Soundcloud</a>
-					</li>
-					<li>
-						<a target="_blank" href="http://www.twitter.com/phuxen" title="tweet @phuxen on twitter">Twitter</a>
-					</li>
-					<li>
-						<a target="_blank" href="http://www.vimeo.com/phuxen" title="Watch my videos on Vimeo">Vimeo</a>
-					</li>
-				</ul>
-				<ul>
-					<li>&copy; 2008 &ndash; 2012 Paul Huxen.<br />Designed and built with tea, Spotify and {LESS}</li>
-				</ul>
-			</footer>
+					<div class="purchaseInfoBox">
+						<div class="info">
+							<h4>Format:</h4>
+							<p>Truetype (TTF)</p>
+							<h4>Price:</h4>
+							<p>Full Family (Regular) – $12.00 from myfonts.com</p>
+						</div>
+						<div class="button">
+							<a class="btn info large" href="" title="Purchase the Bollard typeface"><span class="pictos">3</span> Purchase bollard</a>
+						</div>						
+					</div>
+				</div>
+				
+				<!-- Slide 3 -->
+				<div class = 'slide'>
+					<div class="projectTopImage LTKD">
+						<div class="rolloverBox">
+							<div class="rolloverBoxButton">
+								<a class="fancyBoxImg pictos" rel="LTKD" href="../web_assets/img/LTKD/ltkd3.jpg" title="View a larger image">+</a>
+								<a class="fancyBoxImg pictos" rel="LTKD" rel="LTKD" href="../web_assets/img/LTKD/ltkd4.jpg"></a>
+								<a class="fancyBoxImg pictos" rel="LTKD" rel="LTKD" href="../web_assets/img/LTKD/ltkd5.jpg"></a>
+							</div>
+						</div>
+						<!--
+						<img class="floatCenter displayBlock titleImage" src="../web_assets/img/LTKD/ltkd3BW.jpg" alt="ltkd3BW" width="600" />
+						-->
+					</div>
+					<div class="span100">
+						<h1>Let The Kids Dance</h1>
+						<p>Let The Kids Dance are a fashion company that take new graduates and talent from the worlds of design, art and fashion. My designs were to be used as part of the first women's clothing collection. The designs include previous work such as the typefaces Retro Disco and Fat Marker along with a new layout design for playing cards. New artwork was created especially for the collection such as the hand drawn slogan "…and so we cannot know ourselves…" and the Paisley Monster.</p>
+					</div>
+				</div>
+				
+				<!-- Slide 4 -->
+				<div class = 'slide'>
+					<div class="projectTopImage bollard">
+						<div class="rolloverBox">
+							<div class="rolloverBoxButton">
+								<a class="fancyBoxImg pictos" href="../web_assets/img/type/bollardLarge.jpg" title="View a larger image">+</a>
+							</div>
+						</div>
+					</div>
+					<div class="span100">
+						<h1>Something else which is good</h1>
+						<p>Bollard is a fat and cuddly sans serif typeface which was created during typographic experiments with simple shapes and elements. I had seen many fat fonts however these were still all quite angular and didn't have the softer appearance that I craved. So I took it upon myself to construct this font made of circles and gentle curved corners and unleashed it into the wild a few months later.</p>
+					</div>
+				</div>
+				
+						
+			</div><!-- slider -->
+			<!--<div class ="iosSliderButtons">
+				<div class="button"></div>
+				<div class="button"></div>
+				<div class="button"></div>
+				<div class="button"></div>
+				<div class="button"></div>
+			</div>-->
+		</div><!- iosSlider- -->
+	</div><!-- Container -->
+			
       
-		</div>
-	</div><!-- /container -->
+
 </body>
 </html>

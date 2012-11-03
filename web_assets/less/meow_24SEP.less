@@ -14,13 +14,14 @@ GLOBAL
 
 ========================================================================================= */
 html	{
-	font-size:0.95em;
+	font-size:0.9em;
 	font-family:Helvetica,Arial,sans-serif;
 	line-height:1.4;
 }
 body	{
-	background:url(../img/backgrounds/2.jpg) repeat fixed @backgroundColor;
-	//background:url('http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/shattered.png') repeat fixed @backgroundColor;
+	min-height:100%;
+	//background:url(../img/2.jpg) repeat fixed @backgroundColor;
+	background:url('http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/shattered.png') repeat fixed @backgroundColor;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -33,24 +34,12 @@ body	{
 NAVIGATION
 
 ========================================================================================= */
-.navbar					{
-							.gradientBar(#333, #1a1a1a);
-							//background:@black;
-							border-bottom: 1px solid #121212;
-							position:fixed;width:100%;z-index:2;
-							height:44px;
-							box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
-							-moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
-							-webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
-						}
-	.navbarInner		{
-							//width:@siteWidthFull;
-							margin:0;
-						}
-		a.brand			{float: left;padding:12px 10px 0 20px;color: @white;}
-		a.brand:hover	{text-decoration: none;color:@white;}
+.navbar					{background:@black;position:fixed;width:100%;z-index:2;box-shadow:0 0 4px rgba(0, 0, 0, 0.7);-moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);-webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);}
+	.navbarInner		{width:@siteWidthFull;margin: 0 auto;}
+		a.brand			{float: left;padding:15px 10px 15px 0;color: @white;}
+		a.brand:hover	{text-decoration: none;color:@themeColor;}
 		ul.nav			{float: left;}
-		ul.nav li		{float: left;padding:12px 10px 0;}
+		ul.nav li		{float: left;padding:15px 10px;}
 		ul.nav li a		{color: @grayLight}
 			ul.nav li:hover		{}
 			ul.nav li:hover a	{text-decoration:none;color:white;}
@@ -60,19 +49,10 @@ NAVIGATION
 MAIN ELEMENTS
 
 ========================================================================================= */			
-.container				{
-							//width:@siteWidthFull;
-							width:100%;
-							min-height:100%;
-							//background:@white;
-							//box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
-							//-moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
-							//-webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
-						}
+.container				{width:@siteWidthFull;padding-top:70px;margin: 0 auto;}
 	.header				{}
 	.containerInner		{
-			/*.roundCorners(5px);*/
-			float:left;padding:44px 0 0;overflow:hidden;
+			background:@white;.roundCorners(5px);float:left;margin:0 0 @globalPadding;overflow:hidden;
 			/*-moz-box-shadow:    inset 0 0 10px @white;
 			-webkit-box-shadow: inset 0 0 10px @white;
 			box-shadow:         inset 0 0 10px @white;*/
@@ -122,32 +102,43 @@ SPAN
 SPAN
 
 ========================================================================================= */
-.projectTopImage	{width:@siteWidthFull;height:200px;float:left;overflow:hidden;position:relative;border-bottom:1px solid @gray;}
-	
-	.projectTopImage.bollard		{background:url(../img/type/bollardLarge.jpg) scroll -95px -71px;}
-	.projectTopImage.LTKD			{
-										background:url(../img/LTKD/ltkd4BW.jpg) scroll 0 -120px;
-										-webkit-background-size: cover;
-										-moz-background-size: cover;
-										-o-background-size: cover;
-										background-size: cover;
-										height:350px;
-									}
-		.projectTopImage.LTKD .rolloverBox {height:350px;}
-			.projectTopImage.LTKD .rolloverBox .rolloverBoxButton {top:150px;}
-
+.projectTopImage	{width:@siteWidthFull;height:200px;float:left;overflow:hidden;position:relative;}
+	.projectTopImage.ltkd {background:url();}
 .rolloverBox		{position: absolute; top:0;left:0;width:@siteWidthFull;height:200px;background:rgba(0, 0, 0, 0.2);opacity:0;}
 	.rolloverWrapper	{position:relative;float:left;width:25%;overflow:hidden;}
 		
 		.rolloverBoxButton {left:0;position: absolute;text-align:center;top:80px;width:@siteWidthFull;z-index: 5;font-size:3em;}
 			.rolloverBoxButton a		{color:@white;.transition(.2s linear all);}
 			.rolloverBoxButton a:hover	{color:@themeColor;text-decoration:none;}
-			
-			
-.purchaseInfoBox	{width:@siteWidthFull;background:@grayLighter;float:left;border-top:1px solid @grayLight;padding:15px 15px 0;}
-	.purchaseInfoBox .info		{width:40%;float:left;}
-	.purchaseInfoBox .button	{width:60%;float:left;}
-		.purchaseInfoBox .button .btn	{width:100%;}
+
+/* =========================================================================================
+
+BX SLIDER
+
+========================================================================================= */
+.bx-wrapper				{position:relative;}
+	.bx-window			{}
+	
+		#slider1		{}
+			#slider1 li	{}
+
+
+.bx-pager				{width:@siteWidthFull;padding:0 @globalPadding @globalPadding;text-align:center;}
+	a.pager-link			{.gradientBar(@grayLight, @gray);font-size:0px;padding:6px;.roundCorners(10px);margin:0 2px;outline:none;.transition(.1s linear all);}
+	a.pager-active			{.gradientBar(@themeColor, @themeColorDark);outline:none;}
+	
+	a.pager-link:active		{}
+	a.pager-link:hover		{background-position: 0 -5px;}
+	a.pager-active:hover	{background-position: 0 -5px;}
+	
+.bx-prev, .bx-next		{.transition(.1s linear all);.pictos;font-size:30px;color:@white;outline:none;z-index:-2}	
+.bx-prev				{position:absolute;top:200px;left:-32px;height:30px;width:60px;overflow:hidden;padding:0 0 0 20px;}
+.bx-next				{position:absolute;top:200px;right:-32px;height:30px;width:60px;overflow:hidden;padding:0 20px 0 0;text-align:right;}
+.bx-prev:focus,
+.bx-next:focus			{outline:none;}
+.bx-prev:hover			{text-decoration:none;color:@grayLight;left:-52px;}
+.bx-next:hover			{text-decoration:none;color:@grayLight;right:-52px;}
+
 
 /* =========================================================================================
 
@@ -156,50 +147,42 @@ IOS SLIDER
 ========================================================================================= */
 /* slider container */
 .iosSlider {
-    /* required */
-    position: relative;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    
-    /* optional */
-    width: 100%;
-    height: 100%;
+	/* required */
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
 }
 
 /* slider */
 .iosSlider .slider {
-    /* required */
-    width: 100%;
-    height: 100%;
+	/* required */
+	width: 100%;
+	height: auto;
 }
 
 /* slide */
 .iosSlider .slider .slide {
-    /* required */
-    float: left;
-
-    /* optional */	
-	width:@siteWidthFull;
-	//height:100%;
-	background:@white;
-	margin:0 20px 20px 20px;
-	padding:44px 0 0;
-	box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
-	-moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
-	-webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.7);
-	.roundCorners(0 0 5px 5px);
-	overflow:hidden;
+	/* required */
+	float: left;
+	
+	/*
+	overflow-x:hidden;
+	overflow-y:auto;
+	height:300px;
+	*/
 }
 
 .iosSliderButtons {
-	padding:15px 20px 0 0;
-	float:right;
+	height:40px;
+	width:100px;
+	padding:0;
+	float:none;
 	margin:0 auto;
 }
 
 .iosSliderButtons .button {
-	float:left;
+	float: left;
 	width: 10px;
 	height: 10px;
 	background: #999;
@@ -209,7 +192,7 @@ IOS SLIDER
 }
 
 .iosSliderButtons .selected {
-	background: #fff;
+	background: #000;
 	opacity: 1;
 }
 
@@ -289,12 +272,10 @@ BUTTONS
 	.transition(.1s linear all);
 	.gradientBar(@grayLighter, @grayLight);
 	text-shadow: 0 -1px 0 (@white - 40%);
-	text-align:center;
 	cursor: pointer;
 	display:inline-block;
 	//position:relative;
 	margin-bottom:5px;
-	text-transform: uppercase;
 	/* Icons */
 	.pictos {
 		text-shadow: 0 -1px 0 (@white - 40%);
@@ -310,9 +291,8 @@ BUTTONS
 	}
 	&.large {
 		padding:10px 20px;
-		font-size:1.2em;
+		font-size:1.3em;
 		margin-bottom:0.2em;
-		.roundCorners(6px);
 	}
 	&.large:hover {
 		background-position: 0 -30px;
@@ -381,35 +361,30 @@ BUTTONS
 MOBILE
 
 ========================================================================================= */
-@media screen and (min-width: 481px) and (max-width: 767px) {
-	.span100,
-	.span50,
-	.span25,
-	.bx-pager			{
-							width:100%;
-						}
-						
-}
+
 @media screen and (max-width: 480px) {
-	html	{font-size:1.1em}
-	.span100,
-	.span50,
-	.span25,
-	.bx-pager			{
-							width:100%;
-						}
-						
-	.iosSlider .slider .slide	{margin-right:20px;}
-		
-}
-/*
-@media screen and (min-width: 481px) and (max-width: 767px) {
-	html	{font-size:1.1em}
+	html	{font-size:0.95em}
+		.navbarInner,
+		.container,
+		.containerInner,
 		.span100,
 		.span50,
 		.span25,
-		.bx-pager			{
-								width:@siteWidthMob;
-							}
+		.bx-pager			{width:260px;}
 		
-}*/
+		.bx-prev:hover			{text-decoration:none;color:@grayLight;left:-32px;}
+		.bx-next:hover			{text-decoration:none;color:@grayLight;right:-32px;}
+}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+	html	{font-size:0.95em}
+		.navbarInner,
+		.container,
+		.containerInner,
+		.span100,
+		.span50,
+		.span25,
+		.bx-pager			{width:320px;}
+		
+		.bx-prev:hover			{text-decoration:none;color:@grayLight;left:-32px;}
+		.bx-next:hover			{text-decoration:none;color:@grayLight;right:-32px;}
+}

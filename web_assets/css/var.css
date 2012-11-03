@@ -94,20 +94,20 @@ ARROWS - I once was a designer but then I took an arrow to the knee
 .arrow-n {
   border-bottom-width: 1em;
   border-bottom-style: solid;
-  border-bottom-color: #c3325f;
+  border-bottom-color: #049cdb;
 }
 .arrow-e {
   border-left-width: 1em;
   border-left-style: solid;
-  border-left-color: #c3325f;
+  border-left-color: #049cdb;
 }
 .arrow-s {
   border-top-width: 1em;
   border-top-style: solid;
-  border-top-color: #c3325f;
+  border-top-color: #049cdb;
 }
 .arrow-w {
   border-right-width: 1em;
   border-right-style: solid;
-  border-right-color: #c3325f;
+  border-right-color: #049cdb;
 }

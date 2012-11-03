@@ -32,17 +32,20 @@ $(document).ready(function($){
 			speed: 		1000,
 			easing: 	'easeOutCirc'
 		});
-	});
+	});*/
 	
 	
 	// Random background generator
+	/*
 	$(function(){
     	bgImageTotal=10;
     	randomNumber = Math.round(Math.random()*(bgImageTotal-1))+1;
-    	imgPath=('../web_assets/img/'+randomNumber+'.jpg');
+    	imgPath=('../web_assets/img/backgrounds/'+randomNumber+'.jpg');
     	$('body').css('background-image', ('url("'+imgPath+'")'));
-	});*/
+	});
+	*/
 	
+	// Box that we have on the top of each slider
 	$(".rolloverBox").hover(function() {
 	    $(this).fadeTo("slow", 1);
 	}, 
@@ -96,9 +99,10 @@ $(document).ready(function($){
 	    $('.quote').text( randno );
 	});
 	
+	// SLIDER AND SHIZ
 	$('.iosSlider').iosSlider({		
 		scrollbar: true,
-		snapToChildren: true,
+		snapToChildren: false,
 		desktopClickDrag: true,
 		scrollbarLocation: 'top',
 		scrollbarMargin: '5px 10px 0 10px',
@@ -115,46 +119,20 @@ $(document).ready(function($){
 	function slideContentChange(args) {
 					
 		/* indicator */
-		$(args.sliderObject).parent().find('.iosSliderButtons .button').removeClass('selected');
-		$(args.sliderObject).parent().find('.iosSliderButtons .button:eq(' + args.currentSlideNumber + ')').addClass('selected');
+		$('.iosSliderButtons .button').removeClass('selected');
+		$('.iosSliderButtons .button:eq(' + args.currentSlideNumber + ')').addClass('selected');
 		
 	}
 	
 	function slideContentComplete(args) {
 		
-		/* animation */
-		$(args.sliderObject).find('.text1, .text2').attr('style', '');
-		
-		$(args.currentSlideObject).children('.text1').animate({
-			right: '100px',
-			opacity: '1'
-		}, 400, 'easeOutQuint');
-		
-		$(args.currentSlideObject).children('.text2').delay(200).animate({
-			right: '50px',
-			opacity: '1'
-		}, 400, 'easeOutQuint');
-		
 	}
 	
 	function slideContentLoaded(args) {
 		
-		/* animation */
-		$(args.sliderObject).find('.text1, .text2').attr('style', '');
-		
-		$(args.currentSlideObject).children('.text1').animate({
-			right: '100px',
-			opacity: '1'
-		}, 400, 'easeOutQuint');
-		
-		$(args.currentSlideObject).children('.text2').delay(200).animate({
-			right: '50px',
-			opacity: '1'
-		}, 400, 'easeOutQuint');
-		
 		/* indicator */
-		$(args.sliderObject).parent().find('.iosSliderButtons .button').removeClass('selected');
-		$(args.sliderObject).parent().find('.iosSliderButtons .button:eq(' + args.currentSlideNumber + ')').addClass('selected');
+		$('.iosSliderButtons .button').removeClass('selected');
+		$('.iosSliderButtons .button:eq(' + args.currentSlideNumber + ')').addClass('selected');
 		
 	}
 	
